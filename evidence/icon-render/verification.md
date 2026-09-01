@@ -29,3 +29,10 @@ All six canonical files and their `eum-lab/assets/` copies measured 512x512 RGBA
 - `index.html` no longer contains the public education-materials section or `materials/` references.
 - `D:/HONG/01_AI_신학_교육` and `D:/HONG/09_이음/01_부서/경영조정실/_공개자료` were confirmed to remain present.
 - Post-deletion render: `skip-reason` — master stopped further headless capture retries after the repeated Edge `Multiple targets are not supported in headless mode` error. No new render claim is made.
+
+## Hero branding update
+
+- Replaced `assets/eum-card-logo.png` in the hero with the owner-specified `assets/eum-logo.png`, copied from `eum-camp/public/eum-logo.png`.
+- Added the exact standalone tagline: `하나님과 사람을, 배움과 사역을 잇습니다.`
+- Set the hero logo to 82px with transparent containment and rendered it beside the title.
+- Edge headless render `hero-logo.png` at 1440x900 was visually inspected; the brand logo, tagline, existing introduction, and app cards render without clipping.

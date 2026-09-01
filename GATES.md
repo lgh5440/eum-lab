@@ -19,3 +19,6 @@ Scope: crop six owner-approved source images into canonical 512x512 PNG icons an
 
 - [ ] G4: post-deletion render confirms the public education-materials section is absent
   EVIDENCE: skip-reason: master stopped the repeated Edge `Multiple targets are not supported in headless mode` capture loop after the existing successful render; post-deletion screenshot was not retried. Static HTML/reference and filesystem checks are recorded in `evidence/icon-render/verification.md`.
+
+- [x] G5: hero uses the E:UM brand logo and exact owner tagline in a readable layout
+  EVIDENCE: Edge headless screenshot `evidence/icon-render/hero-logo.png` (1440x900, 113521 bytes) visually inspected; gold E:UM logo appears at an appropriate size beside the title and the exact tagline is readable below the title.
