@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>이음 교육연구소 | E:UM Lab</title>
+  <meta name="description" content="교회와 교육 현장을 위한 이음 교육연구소의 앱과 공개 교육자료입니다.">
+  <link rel="stylesheet" href="tokens.css">
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg-page); color: var(--ink); font-family: var(--font-family-base); font-size: var(--font-size-body); line-height: var(--line-height-body); }
+    a { color: inherit; }
+    .wrap { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
+    .hero { padding: clamp(32px, 7vw, 84px) 0 52px; }
+    .hero-card, .section-card { background: var(--bg-surface); border: 1px solid rgba(var(--primary-blue-rgb), .14); border-radius: var(--radius-xl); box-shadow: var(--shadow-frame); }
+    .hero-card { position: relative; overflow: hidden; padding: clamp(28px, 6vw, 64px); border: 3px solid transparent; background: linear-gradient(var(--bg-surface), var(--bg-surface)) padding-box, var(--rainbow-frame-gradient) border-box; }
+    .hero-card::after { content: ""; position: absolute; width: 220px; height: 220px; right: -70px; top: -80px; border-radius: var(--radius-full); background: var(--bg-panel); opacity: .8; }
+    .brand { position: relative; z-index: 1; display: flex; align-items: center; gap: var(--space-4); }
+    .brand img { width: 74px; height: 74px; border-radius: var(--radius-full); object-fit: cover; box-shadow: var(--shadow-soft); }
+    .eyebrow { margin: 0 0 var(--space-2); color: var(--primary-blue-deep); font-size: var(--font-size-label); font-weight: var(--font-weight-strong); letter-spacing: .08em; }
+    h1 { margin: 0; font-size: clamp(28px, 5vw, 48px); line-height: 1.15; letter-spacing: -.04em; }
+    .lead { max-width: 680px; margin: var(--space-8) 0 0; color: var(--ink-secondary); font-size: clamp(16px, 2vw, 20px); }
+    .section { padding: 28px 0; }
+    .section-head { display: flex; align-items: end; justify-content: space-between; gap: 16px; margin-bottom: 20px; }
+    h2 { margin: 0; font-size: clamp(22px, 3vw, 30px); line-height: var(--line-height-tight); }
+    .section-note { margin: 0; color: var(--ink-tertiary); font-size: var(--font-size-small); }
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .app-card, .material-card { display: block; padding: 22px; text-decoration: none; background: var(--bg-surface); border: 1px solid rgba(var(--primary-blue-rgb), .16); border-radius: var(--radius-md); transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease; }
+    .app-card:hover, .app-card:focus-visible, .material-card:hover, .material-card:focus-visible { transform: translateY(-3px); border-color: var(--primary-blue-light); box-shadow: var(--shadow-cta); outline: none; }
+    .app-icon { display: grid; place-items: center; width: 42px; height: 42px; margin-bottom: 14px; border-radius: var(--radius-sm); background: var(--bg-panel); color: var(--primary-blue-deep); font-weight: var(--font-weight-title); }
+    .app-card h3, .material-card h3 { margin: 0 0 5px; font-size: 17px; line-height: var(--line-height-tight); }
+    .app-card p, .material-card p { margin: 0; color: var(--ink-secondary); font-size: var(--font-size-caption); }
+    .app-card .go { display: inline-block; margin-top: 15px; color: var(--primary-blue-deep); font-size: var(--font-size-small); font-weight: var(--font-weight-strong); }
+    .materials { display: grid; gap: 24px; }
+    .material-group { padding: 22px; background: rgba(255,255,255,.72); border: 1px solid rgba(var(--primary-blue-rgb), .12); border-radius: var(--radius-lg); }
+    .material-group h3 { margin: 0 0 14px; color: var(--primary-blue-deep); font-size: 18px; }
+    .material-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+    .material-card { padding: 15px 16px; border-radius: var(--radius-sm); }
+    .material-card h3 { font-size: 14px; word-break: keep-all; }
+    .material-card p { font-size: var(--font-size-small); }
+    footer { padding: 46px 0 64px; color: var(--ink-secondary); text-align: center; }
+    footer a { color: var(--primary-blue-deep); font-weight: var(--font-weight-strong); }
+    @media (max-width: 760px) { .wrap { width: min(100% - 24px, 620px); } .grid, .material-grid { grid-template-columns: 1fr; } .section-head { display: block; } .section-note { margin-top: 8px; } .hero-card { padding: 28px 22px; } }
+  </style>
+</head>
+<body>
+  <header class="hero"><div class="wrap"><div class="hero-card">
+    <div class="brand"><img src="assets/eum-card-logo.png" alt="이음 교육연구소 로고"><div><p class="eyebrow">E:UM EDUCATION LAB</p><h1>이음 교육연구소</h1></div></div>
+    <p class="lead">교회와 교육 현장의 다음 장면을 함께 설계합니다. 필요한 앱을 만나고, 바로 활용할 수 있는 교육자료를 살펴보세요.</p>
+  </div></div></header>
+
+  <main class="wrap">
+    <section class="section" aria-labelledby="apps-title"><div class="section-head"><h2 id="apps-title">이음 앱</h2><p class="section-note">현장의 배움과 연결을 돕는 6가지 도구</p></div>
+      <div class="grid">
+        <a class="app-card" href="https://lgh5440.github.io/eum-school-v5-demo/" target="_blank" rel="noopener"><span class="app-icon">S</span><h3>스쿨</h3><p>교회학교의 수업과 소통을 돕는 관리 도구</p><span class="go">앱 살펴보기 ↗</span></a>
+        <a class="app-card" href="https://eum-camp-template.web.app" target="_blank" rel="noopener"><span class="app-icon">C</span><h3>캠프</h3><p>행사와 캠프를 쉽고 즐겁게 운영하는 공간</p><span class="go">앱 살펴보기 ↗</span></a>
+        <a class="app-card" href="https://lgh5440.github.io/eum-play/" target="_blank" rel="noopener"><span class="app-icon">P</span><h3>플레이</h3><p>함께 놀며 배우는 교회교육 활동 도구</p><span class="go">앱 살펴보기 ↗</span></a>
+        <a class="app-card" href="https://lgh5440.github.io/talentroad-test/" target="_blank" rel="noopener"><span class="app-icon">T</span><h3>달란트로드</h3><p>은사와 성향을 사역의 언어로 발견하는 여정</p><span class="go">앱 살펴보기 ↗</span></a>
+        <a class="app-card" href="https://lgh5440.github.io/eum-photo/" target="_blank" rel="noopener"><span class="app-icon">Φ</span><h3>포토</h3><p>교회 행사의 순간을 정리하고 나누는 도구</p><span class="go">앱 살펴보기 ↗</span></a>
+        <a class="app-card" href="https://lgh5440.github.io/eum/" target="_blank" rel="noopener"><span class="app-icon">↗</span><h3>링크명함</h3><p>나와 사역을 한 장에 연결하는 디지털 명함</p><span class="go">앱 살펴보기 ↗</span></a>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="materials-title"><div class="section-head"><h2 id="materials-title">공개 교육자료</h2><p class="section-note">파일을 누르면 열거나 내려받을 수 있습니다</p></div><div class="materials">
+      <div class="material-group"><h3>01 · 목회자 AI 교육</h3><div class="material-grid">
+        <a class="material-card" href="materials/01_목회자AI교육/README.md" target="_blank"><h3>교육 소개 README</h3><p>교육 목적과 대상 소개</p></a>
+        <a class="material-card" href="materials/01_목회자AI교육/01_course_plan.md" target="_blank"><h3>과정 계획</h3><p>강의 목표와 과정 계획</p></a>
+        <a class="material-card" href="materials/01_목회자AI교육/02_slide_outline.md" target="_blank"><h3>슬라이드 개요</h3><p>강의 슬라이드 개요</p></a>
+        <a class="material-card" href="materials/01_목회자AI교육/04_hands_on_guide.md" target="_blank"><h3>실습 안내</h3><p>실습 따라하기 안내</p></a>
+        <a class="material-card" href="materials/01_목회자AI교육/05_prompt_cards.md" target="_blank"><h3>프롬프트 카드</h3><p>교육용 프롬프트 카드</p></a>
+        <a class="material-card" href="materials/01_목회자AI교육/06_safety_ethics_checklist.md" target="_blank"><h3>안전·윤리 점검표</h3><p>안전·윤리 점검표</p></a>
+        <a class="material-card" href="materials/01_목회자AI교육/07_case_map.md" target="_blank"><h3>사례 지도</h3><p>적용 사례 지도</p></a>
+        <a class="material-card" href="materials/01_목회자AI교육/08_program_build_processes.md" target="_blank"><h3>제작 절차</h3><p>프로그램 제작 절차</p></a>
+        <a class="material-card" href="materials/01_목회자AI교육/90분_강의대본_v3.md" target="_blank"><h3>90분 강의 대본 v3</h3><p>강의 대본 최종 후보</p></a>
+        <a class="material-card" href="materials/01_목회자AI교육/목회자를 위한 AI&amp;바이브코딩 실전 입문.html" target="_blank"><h3>실전 입문 슬라이드</h3><p>완성형 실전 강의 슬라이드</p></a>
+        <a class="material-card" href="materials/01_목회자AI교육/강의전_사전안내.md" target="_blank"><h3>강의 전 사전안내</h3><p>참가자 사전 안내</p></a>
+        <a class="material-card" href="materials/01_목회자AI교육/실습_따라하기.md" target="_blank"><h3>참가자 실습</h3><p>참가자 실습 자료</p></a>
+      </div></div>
+      <div class="material-group"><h3>02 · 앱 매뉴얼</h3><div class="material-grid">
+        <a class="material-card" href="materials/02_앱매뉴얼/README.md" target="_blank"><h3>플레이 README</h3><p>이음 플레이 사용법 기반</p></a>
+        <a class="material-card" href="materials/02_앱매뉴얼/HowToCard.jsx" target="_blank"><h3>플레이 How-to 카드</h3><p>앱 화면 내 사용 안내</p></a>
+      </div></div>
+      <div class="material-group"><h3>03 · 홈페이지 템플릿</h3><div class="material-grid">
+        <a class="material-card" href="materials/03_홈페이지템플릿/about.html" target="_blank"><h3>소개 페이지</h3><p>교회 소개 페이지 템플릿</p></a>
+        <a class="material-card" href="materials/03_홈페이지템플릿/gallery.html" target="_blank"><h3>갤러리 페이지</h3><p>갤러리 페이지 템플릿</p></a>
+        <a class="material-card" href="materials/03_홈페이지템플릿/index.html" target="_blank"><h3>메인 페이지</h3><p>홈페이지 메인 템플릿</p></a>
+        <a class="material-card" href="materials/03_홈페이지템플릿/location.html" target="_blank"><h3>오시는 길</h3><p>오시는 길 페이지 템플릿</p></a>
+        <a class="material-card" href="materials/03_홈페이지템플릿/news.html" target="_blank"><h3>소식 페이지</h3><p>소식 페이지 템플릿</p></a>
+        <a class="material-card" href="materials/03_홈페이지템플릿/sermons.html" target="_blank"><h3>설교 페이지</h3><p>설교 페이지 템플릿</p></a>
+        <a class="material-card" href="materials/03_홈페이지템플릿/worship.html" target="_blank"><h3>예배 페이지</h3><p>예배 안내 페이지 템플릿</p></a>
+        <a class="material-card" href="materials/03_홈페이지템플릿/사용설명서.txt" target="_blank"><h3>사용설명서</h3><p>초보자용 템플릿 사용 설명</p></a>
+        <a class="material-card" href="materials/03_홈페이지템플릿/style.css" target="_blank"><h3>공통 스타일</h3><p>템플릿 공통 스타일</p></a>
+        <a class="material-card" href="materials/03_홈페이지템플릿/favicon.svg" target="_blank"><h3>파비콘</h3><p>사이트 파비콘</p></a>
+        <a class="material-card" href="materials/03_홈페이지템플릿/hero-mosaic.svg" target="_blank"><h3>히어로 모자이크</h3><p>메인 모자이크 이미지</p></a>
+        <a class="material-card" href="materials/03_홈페이지템플릿/hero.svg" target="_blank"><h3>히어로 이미지</h3><p>메인 히어로 이미지</p></a>
+        <a class="material-card" href="materials/03_홈페이지템플릿/main.js" target="_blank"><h3>메인 스크립트</h3><p>템플릿 동작 스크립트</p></a>
+        <a class="material-card" href="materials/03_홈페이지템플릿/site-data.js" target="_blank"><h3>사이트 데이터</h3><p>사이트 콘텐츠 데이터</p></a>
+      </div></div>
+      <div class="material-group"><h3>04 · 교사동행GPT</h3><div class="material-grid">
+        <a class="material-card" href="materials/04_교사동행GPT/교사동행GPT_첫사용_안내문.md" target="_blank"><h3>첫 사용 안내문</h3><p>교사 대상 첫 사용 안내</p></a>
+        <a class="material-card" href="materials/04_교사동행GPT/안전_개인정보_윤리_가이드.md" target="_blank"><h3>안전·개인정보·윤리</h3><p>안전·개인정보·윤리 가이드</p></a>
+      </div></div>
+    </div></section>
+  </main>
+  <footer class="wrap"><p>이음 교육연구소와 함께 배움의 연결을 만듭니다.</p><a href="mailto:lgh544092@gmail.com">lgh544092@gmail.com</a></footer>
+</body>
+</html>
