@@ -43,3 +43,9 @@ All six canonical files and their `eum-lab/assets/` copies measured 512x512 RGBA
 - Removed its now-unused `.lead` style rule.
 - Preserved the E:UM logo, `이음 교육연구소` title, and exact standalone tagline.
 - Edge headless render `hero-without-intro.png` at 1440x700 was visually inspected; the hero transitions naturally from the brand row to the app section.
+
+## App-section subtitle removal
+
+- Removed the subtitle `현장의 배움과 연결을 돕는 6가지 도구` next to the `이음 앱` heading.
+- Preserved the `이음 앱` heading and all six app cards.
+- Edge headless render `apps-without-subtitle.png` at 1440x900 was visually inspected; the heading and cards remain correctly laid out.

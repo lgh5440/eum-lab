@@ -25,3 +25,6 @@ Scope: crop six owner-approved source images into canonical 512x512 PNG icons an
 
 - [x] G6: obsolete hero introduction paragraph is absent while logo, title, and tagline remain
   EVIDENCE: Edge headless screenshot `evidence/icon-render/hero-without-intro.png` (1440x700, 77846 bytes) visually inspected; hero contains only the brand logo, title, and exact tagline, followed by the app section.
+
+- [x] G7: app-section subtitle is absent while the app heading and six cards remain
+  EVIDENCE: Edge headless screenshot `evidence/icon-render/apps-without-subtitle.png` (1440x900, 113827 bytes) visually inspected; `이음 앱` heading remains, the subtitle is absent, and all six app cards remain visible.
