@@ -21,3 +21,11 @@ All six canonical files and their `eum-lab/assets/` copies measured 512x512 RGBA
 - Legacy text badge elements: 0.
 - Desktop render: `icon-render/desktop.png`, Edge headless, 1440x1200; visually inspected and all six icons appear inside their cards without clipping.
 - Mobile render: a 390x844 Edge headless attempt returned `Multiple targets are not supported in headless mode`; no mobile screenshot is claimed.
+
+## Public education-materials removal
+
+- Before deletion, `eum-lab/materials/` contained 30 files across the four requested categories.
+- All 30 files were removed with `git rm -r -- materials`; no source or staging path was targeted.
+- `index.html` no longer contains the public education-materials section or `materials/` references.
+- `D:/HONG/01_AI_신학_교육` and `D:/HONG/09_이음/01_부서/경영조정실/_공개자료` were confirmed to remain present.
+- Post-deletion render: `skip-reason` — master stopped further headless capture retries after the repeated Edge `Multiple targets are not supported in headless mode` error. No new render claim is made.

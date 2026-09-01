@@ -16,3 +16,6 @@ Scope: crop six owner-approved source images into canonical 512x512 PNG icons an
 
 - [x] G3: rendered eum-lab screenshot visibly shows all six icon images inside cards without clipping
   EVIDENCE: Edge headless desktop screenshot `evidence/icon-render/desktop.png` (1440x1200, 140651 bytes) visually inspected; all six cards show their icon within the card bounds. A separate 390x844 headless attempt was blocked by Edge `Multiple targets are not supported in headless mode`; mobile screenshot remains unavailable.
+
+- [ ] G4: post-deletion render confirms the public education-materials section is absent
+  EVIDENCE: skip-reason: master stopped the repeated Edge `Multiple targets are not supported in headless mode` capture loop after the existing successful render; post-deletion screenshot was not retried. Static HTML/reference and filesystem checks are recorded in `evidence/icon-render/verification.md`.
