@@ -36,3 +36,10 @@ All six canonical files and their `eum-lab/assets/` copies measured 512x512 RGBA
 - Added the exact standalone tagline: `하나님과 사람을, 배움과 사역을 잇습니다.`
 - Set the hero logo to 82px with transparent containment and rendered it beside the title.
 - Edge headless render `hero-logo.png` at 1440x900 was visually inspected; the brand logo, tagline, existing introduction, and app cards render without clipping.
+
+## Obsolete hero introduction removal
+
+- Removed the full hero paragraph that referenced browsing educational materials.
+- Removed its now-unused `.lead` style rule.
+- Preserved the E:UM logo, `이음 교육연구소` title, and exact standalone tagline.
+- Edge headless render `hero-without-intro.png` at 1440x700 was visually inspected; the hero transitions naturally from the brand row to the app section.

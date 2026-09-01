@@ -22,3 +22,6 @@ Scope: crop six owner-approved source images into canonical 512x512 PNG icons an
 
 - [x] G5: hero uses the E:UM brand logo and exact owner tagline in a readable layout
   EVIDENCE: Edge headless screenshot `evidence/icon-render/hero-logo.png` (1440x900, 113521 bytes) visually inspected; gold E:UM logo appears at an appropriate size beside the title and the exact tagline is readable below the title.
+
+- [x] G6: obsolete hero introduction paragraph is absent while logo, title, and tagline remain
+  EVIDENCE: Edge headless screenshot `evidence/icon-render/hero-without-intro.png` (1440x700, 77846 bytes) visually inspected; hero contains only the brand logo, title, and exact tagline, followed by the app section.
