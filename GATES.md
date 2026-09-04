@@ -17,8 +17,8 @@ Scope: crop six owner-approved source images into canonical 512x512 PNG icons an
 - [x] G3: rendered eum-lab screenshot visibly shows all six icon images inside cards without clipping
   EVIDENCE: Edge headless desktop screenshot `evidence/icon-render/desktop.png` (1440x1200, 140651 bytes) visually inspected; all six cards show their icon within the card bounds. A separate 390x844 headless attempt was blocked by Edge `Multiple targets are not supported in headless mode`; mobile screenshot remains unavailable.
 
-- [ ] G4: post-deletion render confirms the public education-materials section is absent
-  EVIDENCE: skip-reason: master stopped the repeated Edge `Multiple targets are not supported in headless mode` capture loop after the existing successful render; post-deletion screenshot was not retried. Static HTML/reference and filesystem checks are recorded in `evidence/icon-render/verification.md`.
+- [x] G4: post-deletion render confirms the public education-materials section is absent
+  EVIDENCE: 2026-09-04 Edge headless (`--headless=new --dump-dom` + `--screenshot`, 1440x1600) on `index.html`: rendered DOM contains exactly one `<section>` (`aria-labelledby="apps-title"`) and one `<h2>` (`이음 앱`); no `materials/` reference, no `class="materials"` element, and the only remaining `교육자료` string is the invisible `<meta name="description">`. Screenshot `evidence/icon-render/post-deletion.png` (129809 bytes) visually inspected: hero, `이음 앱` heading, six app cards, footer — no education-materials section. Earlier skip-reason (Edge `Multiple targets` loop) superseded by this single-target capture.
 
 - [x] G5: hero uses the E:UM brand logo and exact owner tagline in a readable layout
   EVIDENCE: Edge headless screenshot `evidence/icon-render/hero-logo.png` (1440x900, 113521 bytes) visually inspected; gold E:UM logo appears at an appropriate size beside the title and the exact tagline is readable below the title.
