@@ -5,156 +5,197 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>이음 교육연구소 | E:UM Lab</title>
   <meta name="description" content="교회와 교육 현장을 위한 이음 교육연구소의 앱 소개와, 연구소가 직접 만들고 확인한 교육자료입니다.">
-  <link rel="stylesheet" href="tokens.css">
-  <style>
-    * { box-sizing: border-box; }
-    :root { --gold: #D4A017; --gold-light: #FCD34D; }
-    body { margin: 0; background: var(--bg-surface); color: var(--ink); font-family: var(--font-family-base); font-size: var(--font-size-body); line-height: var(--line-height-body); }
-    a { color: inherit; }
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  /* ===== eum_웹토큰_v1 (블루 미니멀 3D 카드형 디자인 시스템) — 정본 그대로 적용 =====
+     출처: D:\HONG\09_이음\02_제품\Web\eum-card\index.html 의 인라인 토큰과 값 동기화 유지. */
+  :root{
+    --p-blue-main:#2F73F2; --p-blue-main-rgb:47,115,242;
+    --p-blue-deep:#1F5FD9; --p-blue-deep-rgb:31,95,217;
+    --p-blue-light:#6FA7FF; --p-blue-light-rgb:111,167,255;
+    --p-bg-white:#FFFFFF; --p-bg-gray-light:#F5F7FA; --p-bg-blue-pale:#EAF3FF; --p-bg-blue-panel:#DDEEFF;
+    --p-ink-900:#101A3D; --p-ink-700:#3A4568; --p-ink-500:#5C6A93;
+    --p-state-disabled-ink:#A7B2CE; --p-state-disabled-bg:#F3F6FC;
 
-    /* ─── 레이아웃: 좌측 세로 네비 + 본문 ─── */
-    .layout { display: flex; min-height: 100vh; }
-    .side-nav { width: 92px; flex-shrink: 0; display: flex; flex-direction: column; align-items: center; justify-content: space-between; padding: var(--space-6) 0; border-right: 1px solid rgba(var(--primary-blue-rgb), .12); }
-    .side-nav .mark { width: 40px; height: auto; }
-    .side-nav .contact { display: flex; flex-direction: column; align-items: center; gap: var(--space-2); }
-    .side-nav .contact a { display: flex; align-items: center; justify-content: center; width: 34px; height: 34px; border-radius: var(--radius-full); background: var(--bg-panel); color: var(--primary-blue-deep); transition: background .15s ease; }
-    .side-nav .contact a:hover { background: var(--primary-blue-light); color: #fff; }
-    .side-nav .scroll { writing-mode: vertical-rl; letter-spacing: .18em; font-size: var(--font-size-micro); color: var(--ink-tertiary); font-weight: var(--font-weight-strong); }
-    .side-nav .scroll::before { content: ""; display: block; width: 1px; height: 40px; margin: 0 auto var(--space-3); background: rgba(var(--primary-blue-rgb), .3); }
+    --primary-blue:var(--p-blue-main); --primary-blue-deep:var(--p-blue-deep); --primary-blue-light:var(--p-blue-light);
+    --primary-blue-rgb:var(--p-blue-main-rgb); --primary-blue-deep-rgb:var(--p-blue-deep-rgb);
+    --bg-page:var(--p-bg-blue-pale); --bg-surface:var(--p-bg-white); --bg-surface-muted:var(--p-bg-gray-light); --bg-panel:var(--p-bg-blue-panel);
+    --ink:var(--p-ink-900); --ink-secondary:var(--p-ink-700); --ink-tertiary:var(--p-ink-500); --ink-on-blue:var(--p-bg-white);
+    --state-disabled-ink:var(--p-state-disabled-ink); --state-disabled-bg:var(--p-state-disabled-bg);
+    --shadow-frame:0 30px 60px -26px rgba(var(--primary-blue-deep-rgb),.35);
+    --shadow-cta:0 14px 26px -12px rgba(var(--primary-blue-rgb),.5);
+    --shadow-soft:0 18px 30px rgba(var(--primary-blue-deep-rgb),.28);
+    --shadow-orb-inset: inset -5px -7px 12px rgba(var(--primary-blue-deep-rgb),.30), inset 3px 4px 7px rgba(255,255,255,.95), 0 12px 20px -8px rgba(var(--primary-blue-rgb),.5);
+    --radius-xl:32px; --radius-lg:29px; --radius-md:16px; --radius-sm:12px; --radius-full:50%;
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    margin:0; min-height:100%; font-family:'Pretendard',-apple-system,sans-serif; color:var(--ink);
+    background:linear-gradient(180deg,var(--bg-panel) 0%,var(--bg-page) 45%,var(--bg-surface) 100%);
+    background-attachment:fixed;
+    overflow-x:hidden;
+  }
+  a{ color:inherit; }
+  .mono{ font-family:'JetBrains Mono',ui-monospace,monospace; }
 
-    .main { flex: 1; min-width: 0; }
-    .top-nav { display: flex; align-items: center; justify-content: space-between; padding: var(--space-5) var(--space-8); }
-    .brand-word { font-weight: var(--font-weight-title); font-size: 18px; letter-spacing: -.02em; }
-    .top-nav nav { display: flex; gap: var(--space-6); font-size: var(--font-size-caption); font-weight: var(--font-weight-strong); color: var(--ink-secondary); }
-    .top-nav nav a:hover { color: var(--primary-blue-deep); }
+  .cloud{ position:fixed; z-index:0; opacity:.75; filter:blur(.3px); pointer-events:none; }
+  .cloud svg{ display:block; }
+  .c1{ top:4%; left:-6%; width:220px; animation:cdrift 26s ease-in-out infinite; }
+  .c2{ top:14%; right:-8%; width:180px; animation:cdrift 30s ease-in-out infinite reverse; }
+  .c3{ bottom:8%; left:-4%; width:160px; animation:cdrift 22s ease-in-out infinite; }
+  @keyframes cdrift{ 0%,100%{transform:translateX(0)} 50%{transform:translateX(18px)} }
+  @media (prefers-reduced-motion: reduce){ .cloud{animation:none} }
 
-    /* ─── 히어로: 대각선 블루 그라데이션 패널 ─── */
-    .hero { position: relative; margin: 0 var(--space-6) var(--space-8); border-radius: var(--radius-xl); overflow: hidden; padding: clamp(40px, 6vw, 72px) clamp(24px, 5vw, 56px); color: #fff;
-      background: linear-gradient(115deg, var(--primary-blue-deep) 0%, var(--primary-blue) 46%, var(--primary-blue-light) 100%); }
-    .hero::before { content: ""; position: absolute; inset: 0; background: linear-gradient(155deg, rgba(255,255,255,.16) 0%, transparent 40%); pointer-events: none; }
-    .hero::after { content: ""; position: absolute; width: 340px; height: 340px; right: -110px; bottom: -140px; border-radius: var(--radius-full); background: rgba(255,255,255,.08); }
-    .hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1.5fr .75fr .78fr; gap: clamp(24px, 4vw, 40px); align-items: start; }
-    .eyebrow-row { display: flex; align-items: center; gap: var(--space-3); margin-bottom: var(--space-4); }
-    .eyebrow-row .bar { width: 28px; height: 2px; background: var(--gold); }
-    .eyebrow-row span { font-size: var(--font-size-label); font-weight: var(--font-weight-strong); letter-spacing: .14em; color: var(--gold-light); }
-    h1 { margin: 0; font-size: clamp(26px, 3vw, 40px); line-height: 1.32; font-weight: var(--font-weight-title); letter-spacing: -.02em; word-break: keep-all; }
-    .hero-sub { margin: var(--space-4) 0 0; max-width: 46ch; color: rgba(255,255,255,.86); font-size: var(--font-size-body); line-height: 1.75; word-break: keep-all; }
+  .shell{ max-width:900px; margin:0 auto; padding:26px 20px 56px; position:relative; z-index:1; }
 
-    .feature-list { list-style: none; margin: var(--space-8) 0 0; padding: 0; display: flex; flex-direction: column; gap: var(--space-2); }
-    .feature-list li a { display: flex; align-items: center; gap: var(--space-4); padding: var(--space-3) 0; border-top: 1px solid rgba(255,255,255,.18); text-decoration: none; color: #fff; }
-    .feature-list li:last-child a { border-bottom: 1px solid rgba(255,255,255,.18); }
-    .feature-list .ic { flex-shrink: 0; width: 38px; height: 38px; border-radius: var(--radius-sm); background: rgba(255,255,255,.14); display: flex; align-items: center; justify-content: center; }
-    .feature-list .tx { flex: 1; min-width: 0; }
-    .feature-list .tx b { display: block; font-size: 14.5px; font-weight: var(--font-weight-strong); }
-    .feature-list .tx span { display: block; margin-top: 2px; font-size: var(--font-size-small); color: rgba(255,255,255,.72); }
-    .feature-list .arrow { flex-shrink: 0; opacity: .75; }
+  .topbar{ display:flex; align-items:center; justify-content:space-between; margin-bottom:18px; }
+  .topbar .brand{ display:flex; align-items:center; gap:10px; }
+  .topbar .logo{ width:30px; height:auto; }
+  .topbar .word{ font-size:15px; font-weight:800; color:var(--ink); }
+  .topbar nav{ display:flex; gap:22px; }
+  .topbar nav a{ font-size:13px; font-weight:700; color:var(--ink-tertiary); text-decoration:none; }
+  .topbar nav a:hover{ color:var(--primary-blue-deep); }
 
-    .hero-visual { display: flex; justify-content: center; align-items: flex-start; padding-top: var(--space-2); }
-    .hero-visual .card { background: #fff; border-radius: var(--radius-lg); padding: clamp(20px, 3vw, 36px); box-shadow: var(--shadow-frame); }
-    .hero-visual img { display: block; width: clamp(96px, 12vw, 140px); height: auto; margin: 0 auto; }
-    .hero-visual .cap { margin: var(--space-4) 0 0; text-align: center; font-size: var(--font-size-small); font-weight: var(--font-weight-strong); color: var(--primary-blue-deep); letter-spacing: .06em; }
+  .frame{ border-radius:var(--radius-xl); padding:3px; margin-bottom:22px;
+    background-image:linear-gradient(135deg, #FF9AD8, #FFD98C, #8CC7FF, #18DDEB, #B98CFF);
+    box-shadow:var(--shadow-frame);
+  }
+  .card{ background:var(--bg-surface); border-radius:var(--radius-lg); padding:36px 36px; position:relative; overflow:hidden; }
 
-    .hero-panel { display: flex; flex-direction: column; gap: var(--space-4); }
-    .cta-box { background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.22); border-radius: var(--radius-md); padding: var(--space-6); }
-    .cta-box .label { font-size: var(--font-size-label); color: rgba(255,255,255,.7); font-weight: var(--font-weight-strong); letter-spacing: .06em; margin: 0 0 var(--space-2); }
-    .cta-box a.go-btn { display: flex; align-items: center; justify-content: center; gap: var(--space-2); margin-top: var(--space-4); padding: var(--space-3) var(--space-4); background: var(--ink); color: #fff; border-radius: var(--radius-sm); text-decoration: none; font-weight: var(--font-weight-strong); font-size: var(--font-size-caption); transition: background .15s ease; }
-    .cta-box a.go-btn:hover { background: var(--primary-blue-deep); }
-    .cta-box .app-title { margin: 0; font-size: 19px; font-weight: var(--font-weight-title); }
+  .hero-banner{ display:flex; align-items:center; gap:24px; }
+  .hero-text{ flex:1; min-width:0; }
+  .hero-icon-col{ flex-shrink:0; width:285px; display:flex; flex-direction:column; align-items:center; }
+  .hero-icon-col img{ width:285px; height:285px; object-fit:contain; }
+  @media (max-width:640px){
+    .hero-banner{ flex-direction:column-reverse; gap:6px; text-align:center; }
+    .hero-icon-col{ width:220px; }
+    .hero-icon-col img{ width:220px; height:220px; }
+  }
 
-    .notice-box { background: #fff; border-radius: var(--radius-md); padding: var(--space-5) var(--space-6); color: var(--ink); }
-    .notice-box .pill { display: inline-block; padding: 3px 11px; border-radius: var(--radius-full); background: var(--bg-panel); color: var(--primary-blue-deep); font-size: var(--font-size-small); font-weight: var(--font-weight-strong); margin-bottom: var(--space-3); }
-    .notice-box h3 { margin: 0 0 var(--space-2); font-size: 15px; }
-    .notice-box p { margin: 0; font-size: var(--font-size-small); color: var(--ink-tertiary); }
+  .cat{ font-size:12.5px; font-weight:700; color:var(--primary-blue-deep); letter-spacing:.06em; margin:0 0 10px; }
+  h1{ margin:0; font-size:clamp(26px,4vw,38px); font-weight:800; letter-spacing:-.01em; color:var(--ink); line-height:1.42; word-break:keep-all; }
+  .hero-verse{ margin:14px 0 0; max-width:40ch; font-size:14.5px; line-height:1.75; color:var(--ink-tertiary); word-break:keep-all; }
+  .hero-verse cite{ display:block; margin-top:6px; font-style:normal; font-size:12px; font-weight:700; color:var(--primary-blue-deep); }
+  @media (max-width:640px){ .hero-verse{ max-width:none; } }
 
-    footer { background: var(--ink); color: rgba(255,255,255,.7); text-align: center; padding: var(--space-10) var(--space-6) var(--space-8); }
-    footer p { margin: 0 0 var(--space-2); font-size: var(--font-size-caption); }
-    footer a { color: #fff; font-weight: var(--font-weight-strong); text-decoration: none; }
-    footer .fine { margin-top: var(--space-4); font-size: var(--font-size-micro); color: rgba(255,255,255,.4); }
+  .rule{ height:1px; background:var(--bg-panel); margin:22px 0; }
 
-    @media (max-width: 900px) {
-      .side-nav { width: 64px; }
-      .top-nav { padding: var(--space-4); }
-      .top-nav nav { display: none; }
-      .hero { margin: 0 var(--space-3) var(--space-6); }
-      .hero-grid { grid-template-columns: 1fr; }
-      .hero-visual { order: -1; padding-top: 0; margin-bottom: var(--space-4); }
-      .hero-visual .card { padding: var(--space-5); }
-      h1 { font-size: 25px; }
-    }
-  </style>
+  h2{ margin:0 0 6px; font-size:18px; font-weight:800; color:var(--ink); }
+  .section-lede{ margin:0 0 18px; font-size:13.5px; color:var(--ink-tertiary); line-height:1.7; word-break:keep-all; }
+
+  .apps{ display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+  .app-chip{
+    display:flex; flex-direction:column; align-items:center; gap:10px;
+    text-align:center; text-decoration:none; color:var(--primary-blue-deep);
+    font-size:14px; font-weight:800; padding:22px 12px; border-radius:var(--radius-md);
+    background:var(--bg-surface-muted); border:1px solid transparent; transition:all .15s ease;
+  }
+  .app-chip .aicon{ width:72px; height:72px; object-fit:cover; border-radius:16px; box-shadow:var(--shadow-soft); }
+  .app-chip .desc{ display:block; margin-top:4px; font-size:11.5px; font-weight:600; color:var(--ink-tertiary); line-height:1.5; word-break:keep-all; }
+  .app-chip:hover{ transform:translateY(-3px); border-color:var(--primary-blue); }
+  .app-chip:focus-visible{ outline:2px solid var(--primary-blue); outline-offset:2px; }
+  @media (max-width:640px){ .apps{ grid-template-columns:repeat(2,1fr); } .app-chip .aicon{ width:60px; height:60px; } }
+
+  .pair{ display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  .pane{ background:var(--bg-surface-muted); border-radius:var(--radius-md); padding:22px; }
+  .pill{ display:inline-block; font-size:11px; font-weight:700; letter-spacing:.04em; color:var(--primary-blue-deep); background:var(--bg-panel); padding:4px 10px; border-radius:var(--radius-full); margin-bottom:12px; }
+  .pane h3{ margin:0 0 6px; font-size:15px; font-weight:800; color:var(--ink); }
+  .pane p{ margin:0; font-size:13px; color:var(--ink-tertiary); line-height:1.7; word-break:keep-all; }
+  .pane a.mailto{ display:inline-block; margin-top:14px; font-size:13px; font-weight:700; color:var(--primary-blue-deep); text-decoration:none; border-bottom:1.5px solid var(--primary-blue-light); }
+
+  footer{ text-align:center; margin-top:36px; }
+  footer .tag{ margin:0 0 8px; font-size:13.5px; font-weight:700; color:var(--ink-secondary); }
+  footer .made{ margin:0; font-size:12px; color:var(--ink-tertiary); }
+
+  @media (max-width:640px){
+    .card{ padding:32px 22px; }
+    .pair{ grid-template-columns:1fr; }
+    .topbar nav{ gap:14px; }
+  }
+</style>
 </head>
 <body>
-  <div class="layout">
-    <aside class="side-nav">
-      <img class="mark" src="assets/eum-logo.png" alt="이음 E:UM">
-      <div class="contact">
-        <a href="mailto:lgh544092@gmail.com" aria-label="이메일 문의" title="이메일 문의">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg>
+<div class="cloud c1"><svg viewBox="0 0 200 90" width="220"><ellipse cx="60" cy="55" rx="55" ry="30" fill="#fff"/><ellipse cx="110" cy="40" rx="45" ry="34" fill="#fff"/><ellipse cx="150" cy="58" rx="40" ry="24" fill="#fff"/></svg></div>
+<div class="cloud c2"><svg viewBox="0 0 200 90" width="180"><ellipse cx="60" cy="55" rx="50" ry="27" fill="#fff"/><ellipse cx="110" cy="42" rx="40" ry="30" fill="#fff"/><ellipse cx="145" cy="58" rx="35" ry="22" fill="#fff"/></svg></div>
+<div class="cloud c3"><svg viewBox="0 0 200 90" width="160"><ellipse cx="60" cy="55" rx="45" ry="24" fill="#fff"/><ellipse cx="105" cy="42" rx="36" ry="27" fill="#fff"/><ellipse cx="140" cy="58" rx="30" ry="20" fill="#fff"/></svg></div>
+
+<div class="shell">
+  <div class="topbar">
+    <div class="brand">
+      <img class="logo" src="assets/eum-logo.png" alt="이음 E:UM 로고">
+      <span class="word">이음교육연구소</span>
+    </div>
+    <nav>
+      <a href="#apps">이음 앱</a>
+      <a href="#materials">교육자료</a>
+      <a href="#contact">문의</a>
+    </nav>
+  </div>
+
+  <div class="frame">
+    <div class="card">
+      <div class="hero-banner">
+        <div class="hero-text">
+          <p class="cat mono">E:UM EDUCATION LAB</p>
+          <h1>하나님과 사람을,<br>배움과 사역을 잇습니다.</h1>
+          <p class="hero-verse">"모든 성경은 하나님의 감동으로 된 것으로 교훈과 책망과 바르게 함과 의로 교육하기에 유익하니"<cite>디모데후서 3:16</cite></p>
+        </div>
+        <div class="hero-icon-col">
+          <img src="assets/hero-icon.png" alt="우측 상단에서 은은한 빛이 비치는 성경책과 십자가가 비친 돋보기 — 이음교육연구소 대표 아이콘">
+        </div>
+      </div>
+
+      <div class="rule"></div>
+
+      <h2 id="apps">이음 앱</h2>
+      <p class="section-lede">교회와 교육 현장에서 바로 쓰는 이음의 앱들입니다. 계속 늘어납니다.</p>
+      <div class="apps">
+        <a class="app-chip" href="https://lgh5440.github.io/eum-school-v5-demo/" target="_blank" rel="noopener">
+          <img class="aicon" src="assets/school.png" alt="스쿨 아이콘">스쿨<span class="desc">출결 관리부터 부서·반 배정까지<br>교회학교 행정을 한 곳에서</span>
+        </a>
+        <a class="app-chip" href="https://eum-camp-template.web.app" target="_blank" rel="noopener">
+          <img class="aicon" src="assets/camp.png" alt="캠프 아이콘">캠프<span class="desc">수련회 조 편성부터 운영까지<br>번거로운 준비를 간단하게</span>
+        </a>
+        <a class="app-chip" href="https://lgh5440.github.io/eum-play/" target="_blank" rel="noopener">
+          <img class="aicon" src="assets/play.png" alt="플레이 아이콘">플레이<span class="desc">말씀을 소재로 한 미니게임으로<br>즐겁게 배우는 학습 시간</span>
+        </a>
+        <a class="app-chip" href="https://lgh5440.github.io/eum-photo/" target="_blank" rel="noopener">
+          <img class="aicon" src="assets/photo.png" alt="포토 아이콘">포토<span class="desc">행사 사진을 모으고 정리해서<br>함께 나누는 우리들의 사진첩</span>
+        </a>
+        <a class="app-chip" href="https://lgh5440.github.io/eum/" target="_blank" rel="noopener">
+          <img class="aicon" src="assets/card.png" alt="링크명함 아이콘">링크명함<span class="desc">연락처와 소개를 한 장에 담아<br>가볍게 공유하는 디지털 명함</span>
+        </a>
+        <a class="app-chip" href="https://lgh5440.github.io/talentroad-test/" target="_blank" rel="noopener">
+          <img class="aicon" src="assets/talentroad.png" alt="달란트로드 아이콘">달란트로드<span class="desc">재능과 흥미를 하나씩 살펴보며<br>나의 길을 찾아가는 진로 탐색</span>
         </a>
       </div>
-      <span class="scroll">SCROLL</span>
-    </aside>
 
-    <div class="main">
-      <div class="top-nav">
-        <span class="brand-word">이음 교육연구소</span>
-        <nav><a href="#apps">이음 앱</a><a href="#materials">교육자료</a></nav>
-      </div>
+      <div class="rule"></div>
 
-      <section class="hero">
-        <div class="hero-grid">
-          <div class="hero-text">
-            <div class="eyebrow-row"><span class="bar"></span><span>E:UM EDUCATION LAB</span></div>
-            <h1>하나님과 사람을,<br>배움과 사역을 잇습니다.</h1>
-            <p class="hero-sub">이음 교육연구소가 만든 앱과, 현장에서 바로 쓸 교육자료를 이곳에서 만나보세요.</p>
-
-            <ul class="feature-list">
-              <li><a href="#apps">
-                <span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></span>
-                <span class="tx"><b>이음 앱</b><span>스쿨·캠프·플레이 등 모두 보기</span></span>
-                <span class="arrow">→</span>
-              </a></li>
-              <li><a href="#materials">
-                <span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span>
-                <span class="tx"><b>교육자료</b><span>연구소가 만들고 확인한 자료</span></span>
-                <span class="arrow">→</span>
-              </a></li>
-              <li><a href="mailto:lgh544092@gmail.com">
-                <span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg></span>
-                <span class="tx"><b>문의</b><span>언제든 이메일로 연락주세요</span></span>
-                <span class="arrow">→</span>
-              </a></li>
-            </ul>
-          </div>
-
-          <div class="hero-visual">
-            <div class="card">
-              <img src="assets/eum-logo.png" alt="이음 E:UM 브랜드 로고">
-              <p class="cap">E : U M</p>
-            </div>
-          </div>
-
-          <div class="hero-panel">
-            <div class="cta-box" id="apps">
-              <p class="label">이음 앱</p>
-              <p class="app-title">계속 늘어나는<br>이음의 앱들</p>
-              <a class="go-btn" href="https://lgh5440.github.io/eum/" target="_blank" rel="noopener">이음 앱 모두 보기 ↗</a>
-            </div>
-            <div class="notice-box" id="materials">
-              <span class="pill">교육자료</span>
-              <h3>준비중입니다</h3>
-              <p>연구소가 직접 만들고 확인한 자료만 올릴 예정입니다.</p>
-            </div>
-          </div>
+      <div class="pair">
+        <div class="pane" id="materials">
+          <span class="pill">교육자료</span>
+          <h3>준비중입니다</h3>
+          <p>연구소가 직접 만들고 확인한 자료만 올릴 예정입니다.</p>
         </div>
-      </section>
-
-      <footer>
-        <p>이음 교육연구소와 함께 배움의 연결을 만듭니다.</p>
-        <a href="mailto:lgh544092@gmail.com">lgh544092@gmail.com</a>
-        <p class="fine">E:UM Education Lab</p>
-      </footer>
+        <div class="pane" id="contact">
+          <span class="pill">문의</span>
+          <h3>언제든 이메일로</h3>
+          <p>앱 도입·자료·협업 제안 편하게 문의해 주세요.</p>
+          <a class="mailto" href="mailto:lgh544092@gmail.com">lgh544092@gmail.com ↗</a>
+        </div>
+      </div>
     </div>
   </div>
+
+  <footer>
+    <p class="tag">이음교육연구소와 함께 배움의 연결을 만듭니다.</p>
+    <p class="made mono">E:UM EDUCATION LAB</p>
+  </footer>
+</div>
 </body>
 </html>
