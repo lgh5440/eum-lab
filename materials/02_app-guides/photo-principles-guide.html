@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>이음 포토 — 사용 원칙과 안내 | 이음 교육연구소 교육자료</title>
+  <meta name="description" content="사진을 서버에 올리지 않는 로컬 우선 원칙, 스쿨과의 CSV 연동">
+  <link rel="stylesheet" href="../../tokens.css">
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg-page); color: var(--ink); font-family: var(--font-family-base); font-size: var(--font-size-body); line-height: 1.75; }
+    .wrap { width: min(860px, calc(100% - 32px)); margin: 0 auto; }
+    .top { padding: 18px 0; font-size: var(--font-size-small); color: var(--ink-secondary); display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+    .top a { color: var(--primary-blue-deep); font-weight: var(--font-weight-strong); text-decoration: none; }
+    .doc { background: var(--bg-surface); border: 1px solid rgba(var(--primary-blue-rgb), .14); border-radius: var(--radius-xl); box-shadow: var(--shadow-frame); padding: clamp(22px, 5vw, 48px); margin: 6px 0 40px; word-break: keep-all; overflow-wrap: anywhere; }
+    .doc h1 { font-size: clamp(24px, 4vw, 34px); line-height: 1.2; letter-spacing: -.03em; margin: 0 0 18px; }
+    .doc h2 { font-size: 22px; margin: 34px 0 10px; padding-top: 16px; border-top: 1px solid rgba(var(--primary-blue-rgb), .12); color: var(--primary-blue-deep); }
+    .doc h3 { font-size: 18px; margin: 24px 0 8px; }
+    .doc p, .doc li { color: var(--ink); }
+    .doc blockquote { margin: 14px 0; padding: 12px 16px; background: var(--bg-panel); border-left: 4px solid var(--primary-blue-light); border-radius: var(--radius-sm); }
+    .doc blockquote p { margin: 4px 0; }
+    .doc pre { background: #101A3D; color: #F5F7FA; padding: 14px 16px; border-radius: var(--radius-sm); overflow-x: auto; font-size: 14px; line-height: 1.55; }
+    .doc code { font-family: ui-monospace, Consolas, monospace; font-size: .95em; background: var(--bg-panel); padding: 1px 5px; border-radius: 4px; }
+    .doc pre code { background: none; padding: 0; }
+    .doc table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 15px; display: block; overflow-x: auto; }
+    .doc th, .doc td { border: 1px solid rgba(var(--primary-blue-rgb), .18); padding: 8px 10px; text-align: left; vertical-align: top; }
+    .doc th { background: var(--bg-panel); }
+    .doc a { color: var(--primary-blue-deep); }
+    .doc img { max-width: 100%; }
+    .meta { margin: 0 0 22px; color: var(--ink-tertiary); font-size: var(--font-size-small); }
+    footer { padding: 10px 0 50px; text-align: center; color: var(--ink-secondary); font-size: var(--font-size-small); }
+    @media print { .top, footer { display: none; } .doc { box-shadow: none; border: 0; padding: 0; } }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="top"><a href="../../index.html#materials-title">← 이음 교육연구소 교육자료</a><span>·</span><span>② 이음 앱 사용 안내</span></div>
+    <article class="doc">
+      <p class="meta">eum-photo 저장소 README · 상세 문서 링크는 GitHub 저장소로 연결</p>
+<h1>이음 포토 (eum-photo)</h1>
+<p>교회학교 사진을 사용자 컴퓨터 안에서 정리하는 로컬 우선 도구입니다.</p>
+<h2>원칙</h2>
+<ul>
+<li>사진 원본을 서버에 올리지 않습니다.</li>
+<li>현재 MVP는 브라우저 메모리에서만 사진을 분석합니다.</li>
+<li>이음 스쿨과는 CSV/JSON 명단 import 방식으로 느슨하게 연결합니다.</li>
+</ul>
+<h2>기능 요약</h2>
+<h3>정리 흐름</h3>
+<ul>
+<li>여러 사진 선택 또는 드래그 앤 드롭 (작업 도중에도 워크스페이스 어디든 추가 가능)</li>
+<li>날짜별 자동 그룹, 이미지 해시 기반 중복 후보, 샘플 픽셀 대비 기반 흐림 후보 탐지</li>
+<li>행사명·학생 이름 태그 (직접 입력 또는 명단 CSV 칩 클릭)</li>
+<li>대표·보관·공개후보·제외 선별 (키보드 1·2·3·4 단축키, 사진 카드에 배지로 표시)</li>
+<li>대표 인물 폴더 만들기 (확대 보기 얼굴 박스 → 이름 입력) · 이름 변경 / 삭제 도구</li>
+</ul>
+<h3>명단 매칭과 공개 동의</h3>
+<ul>
+<li>학생 명단 CSV (이름·반·<strong>공개동의</strong> 컬럼) import</li>
+<li>명단 칩에 매칭 사진 수 배지 + 공개 동의 ✓/✗/? 표식</li>
+<li>공개 후보 사진에 미동의 학생이 포함되면 사진 카드에 빨간 「공개 미동의」 뱃지와 자동 검토 항목 표시</li>
+<li>정리안 JSON에 사진별 consent 블록과 rosterMatch 요약 포함</li>
+</ul>
+<h3>내보내기</h3>
+<ul>
+<li><code>로컬 폴더 저장</code> (Chrome/Edge): 사용자 폴더에 행사/상태/인물 구조 + <code>_정리안.csv</code> + <code>_정리안.json</code></li>
+<li><code>정리본 ZIP</code>: 모든 브라우저 호환, 같은 폴더 구조를 ZIP으로</li>
+<li><code>Google Drive</code>: OAuth client_id 설정 시 활성, drive.file 권한만 사용</li>
+<li><code>정리표 ▾</code> 드롭다운: 사진 없이 CSV / JSON만</li>
+</ul>
+<h3>누적 통계</h3>
+<ul>
+<li><code>이 행사 누적에 추가</code>로 행사 단위 사진 분포를 localStorage에 누적</li>
+<li>학생별 누적 사진 수가 다음 행사에서도 합산되어 등장 균형을 비교</li>
+</ul>
+<h3>교사 친화 보강</h3>
+<ul>
+<li>첫 화면에 4단계 작업 가이드와 「새로고침 시 사진 사라짐 → 작업 저장 권유」 빨간 안내</li>
+<li>사진이 들어와 있을 때 새로고침/창 닫기 시 OS 기본 「변경 저장 안 됨」 경고</li>
+<li><code>비우기</code> / <code>기록 비우기</code> 확인 다이얼로그</li>
+<li>행사명 default 빈값 + placeholder + 비어 있을 때 사이드바 빨간 경고</li>
+<li>사진 분석 진행률 X/Y 표시</li>
+<li>모바일에서 사이드바를 ☰ 토글로 슬라이드 인 패널 처리</li>
+</ul>
+<h2>실행</h2>
+<pre><code class="language-bash">npm install
+npm run dev
+</code></pre>
+<h2>작업 저장 방식</h2>
+<ul>
+<li><code>작업 저장</code>은 사진 원본이 아니라 태그, 상태, 인물 폴더, 얼굴 박스 정보를 JSON으로 저장합니다.</li>
+<li>다시 작업할 때는 원본 사진을 먼저 추가한 뒤 <code>작업 불러오기</code>로 JSON을 선택합니다.</li>
+<li>파일명, 파일 크기, 수정 시간을 기준으로 같은 사진을 찾아 기존 작업 상태를 복원합니다.</li>
+<li><code>학생 명단 CSV</code>는 <code>이름</code>, <code>성명</code>, <code>학생명</code>, <code>name</code> 열을 우선 읽고, 없으면 첫 번째 열을 이름 목록으로 사용합니다.</li>
+<li>Chrome/Edge에서는 <code>로컬 폴더 저장</code>으로 선택한 폴더 안에 행사/상태/인물별 하위 폴더와 <code>_정리안.csv</code>, <code>_정리안.json</code>을 직접 만들 수 있습니다.</li>
+<li>폴더 직접 저장을 지원하지 않는 브라우저에서는 <code>정리본 ZIP</code>을 사용합니다 (<code>_정리안.csv</code>/<code>_정리안.json</code> 동봉).</li>
+<li><code>정리안 JSON</code>은 행사/인물 요약과 사진별 권장 폴더·파일명을 포함하므로 이음 스쿨이나 다른 도구로 import할 수 있습니다.</li>
+<li>배포 빌드에서는 PWA 기본 설정이 적용되어 데스크탑/모바일에서 설치형 웹앱처럼 사용할 수 있습니다.</li>
+</ul>
+<h2>테스트 자료</h2>
+<ul>
+<li>교사용 테스트 절차: <code>docs/TEACHER_TEST_SCENARIO.md</code></li>
+<li>학생 명단 샘플: <code>docs/sample-roster.csv</code></li>
+</ul>
+<h2>Google Drive 저장 설정 (선택)</h2>
+<p><code>Google Drive</code> 버튼은 OAuth client_id가 설정된 경우에만 보입니다.</p>
+<ol>
+<li>Google Cloud Console에서 새 프로젝트를 만들고 <strong>OAuth 동의 화면</strong>과 <strong>OAuth 2.0 Client ID</strong>(웹 애플리케이션)를 생성합니다.</li>
+<li>승인된 JavaScript 원본에 빌드를 호스팅하는 도메인(예: <code>http://localhost:5173</code>)을 추가합니다.</li>
+<li>
+<p>프로젝트 루트에 <code>.env.local</code> 파일을 만들고 다음 값을 적습니다.</p>
+<p><code>text
+VITE_GOOGLE_CLIENT_ID=발급받은_클라이언트_ID</code></p>
+</li>
+<li>
+<p><code>npm run dev</code> 또는 <code>npm run build</code>를 다시 실행합니다.</p>
+</li>
+<li>첫 사용 시 Google 로그인 창이 열려 <code>drive.file</code> 권한을 묻습니다(이 앱이 만든 파일만 접근).</li>
+</ol>
+<p><code>drive.file</code> 범위만 사용하므로 기존 Drive 파일은 건드리지 않습니다. 행사 단위로 새 폴더를 만들고 그 안에 행사/상태/인물 구조와 <code>_정리안.csv</code>/<code>_정리안.json</code>을 함께 업로드합니다.</p>
+<h2>다음 단계</h2>
+<ul>
+<li>이음 스쿨에서 정리안 JSON 받아 학생 매칭 미리보기</li>
+<li>모바일 현장 수집 모드</li>
+<li>얼굴 인식은 사용자 PC/Electron 앱 단계에서 별도 검토</li>
+</ul>
+    </article>
+  </div>
+  <footer>이음 교육연구소 · 이 자료는 연구소가 직접 만들고 확인한 것입니다. 교회·교육 현장에서 자유롭게 활용하세요.</footer>
+</body>
+</html>

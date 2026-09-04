@@ -28,3 +28,8 @@ Scope: crop six owner-approved source images into canonical 512x512 PNG icons an
 
 - [x] G7: app-section subtitle is absent while the app heading and six cards remain
   EVIDENCE: Edge headless screenshot `evidence/icon-render/apps-without-subtitle.png` (1440x900, 113827 bytes) visually inspected; `이음 앱` heading remains, the subtitle is absent, and all six app cards remain visible.
+
+- [x] G8: owner-approved intro paragraph and curated education-materials section are present, every material link resolves, and no owner contact info is in `materials/` (supersedes G4/G6 — owner approval 2026-09-04 "준비해둔 후보 그대로 진행")
+  CHECK: runtime python `pack/round/evidence/eum-lab-publish-20260904/verify_render.py` (Playwright file:// desktop 1280 + mobile 390)
+  EXPECT: VERDICT: PASS — h2 == [이음 앱, 교육자료], app cards 6 (hrefs unchanged), material cards 10 in 3 groups, material links 16/16 exist, phone/email hits in materials 0, nested anchors 0, badges/draft banner 0, broken images 0, console errors 0, no horizontal scroll on mobile, app-section subtitle still absent (G7 kept)
+  EVIDENCE: 2026-09-04 run → VERDICT: PASS; `render-check.json`, `after-desktop.png` (1280×2517), `after-mobile.png` (390×4302), sub-page screenshots (pre-lecture-guide, camp guide, card example, church template) visually inspected. Build script `build_materials.py` + `materials/manifest.json` (source/output SHA-256, authorship, confidence). Held (not published): 달란트로드 종합보고서.docx — content is a development report, not a form (owner confirmation requested).

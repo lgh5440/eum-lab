@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>링크명함 만들기 — 실습 따라하기 | 이음 교육연구소 교육자료</title>
+  <meta name="description" content="강의 실습을 혼자서도 따라 할 수 있게 쓴 참가자용 안내">
+  <link rel="stylesheet" href="../../tokens.css">
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg-page); color: var(--ink); font-family: var(--font-family-base); font-size: var(--font-size-body); line-height: 1.75; }
+    .wrap { width: min(860px, calc(100% - 32px)); margin: 0 auto; }
+    .top { padding: 18px 0; font-size: var(--font-size-small); color: var(--ink-secondary); display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+    .top a { color: var(--primary-blue-deep); font-weight: var(--font-weight-strong); text-decoration: none; }
+    .doc { background: var(--bg-surface); border: 1px solid rgba(var(--primary-blue-rgb), .14); border-radius: var(--radius-xl); box-shadow: var(--shadow-frame); padding: clamp(22px, 5vw, 48px); margin: 6px 0 40px; word-break: keep-all; overflow-wrap: anywhere; }
+    .doc h1 { font-size: clamp(24px, 4vw, 34px); line-height: 1.2; letter-spacing: -.03em; margin: 0 0 18px; }
+    .doc h2 { font-size: 22px; margin: 34px 0 10px; padding-top: 16px; border-top: 1px solid rgba(var(--primary-blue-rgb), .12); color: var(--primary-blue-deep); }
+    .doc h3 { font-size: 18px; margin: 24px 0 8px; }
+    .doc p, .doc li { color: var(--ink); }
+    .doc blockquote { margin: 14px 0; padding: 12px 16px; background: var(--bg-panel); border-left: 4px solid var(--primary-blue-light); border-radius: var(--radius-sm); }
+    .doc blockquote p { margin: 4px 0; }
+    .doc pre { background: #101A3D; color: #F5F7FA; padding: 14px 16px; border-radius: var(--radius-sm); overflow-x: auto; font-size: 14px; line-height: 1.55; }
+    .doc code { font-family: ui-monospace, Consolas, monospace; font-size: .95em; background: var(--bg-panel); padding: 1px 5px; border-radius: 4px; }
+    .doc pre code { background: none; padding: 0; }
+    .doc table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 15px; display: block; overflow-x: auto; }
+    .doc th, .doc td { border: 1px solid rgba(var(--primary-blue-rgb), .18); padding: 8px 10px; text-align: left; vertical-align: top; }
+    .doc th { background: var(--bg-panel); }
+    .doc a { color: var(--primary-blue-deep); }
+    .doc img { max-width: 100%; }
+    .meta { margin: 0 0 22px; color: var(--ink-tertiary); font-size: var(--font-size-small); }
+    footer { padding: 10px 0 50px; text-align: center; color: var(--ink-secondary); font-size: var(--font-size-small); }
+    @media print { .top, footer { display: none; } .doc { box-shadow: none; border: 0; padding: 0; } }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="top"><a href="../../index.html#materials-title">← 이음 교육연구소 교육자료</a><span>·</span><span>① 목회자를 위한 AI·바이브코딩 교육</span></div>
+    <article class="doc">
+      <p class="meta">참가자 배포용 · 강의 배포자료 (다운로드: hands-on-guide.md)</p>
+<h1>링크명함 만들기</h1>
+<hr />
+<h2>준비물</h2>
+<ul>
+<li>노트북 — <strong>작업용</strong></li>
+<li>휴대폰이나 태블릿 — <strong>줌 보는 용</strong>
+  (한 대로 둘 다 하시면 창 바꾸다 놓칩니다. 노트북 하나뿐이면 <code>윈도우 키</code>+<code>←</code>/<code>→</code> 로 반씩 붙여놓으세요)</li>
+<li><strong>Claude Code</strong> (<code>claude.com/product/claude-code</code> — 미리 설치·로그인)</li>
+<li><strong>Netlify 계정</strong> (<code>netlify.com</code> — 무료. 미리 가입)</li>
+<li><strong>내 사진 1장</strong> · <strong>내 종이 명함 사진</strong> (없으면 교회 주보)</li>
+</ul>
+<blockquote>
+<p>못 따라오셔도 됩니다. <strong>녹화해서 보내드립니다.</strong> 막히시면 채팅에 「막혔어요」 치세요.</p>
+</blockquote>
+<hr />
+<h1>0 · 준비 — 폴더 하나 만들기</h1>
+<p>바탕화면에 <strong>「내명함」</strong> 폴더를 만들고, <strong>셋을 넣습니다.</strong></p>
+<pre><code>실습용_명함.html  ·  내 사진  ·  명함 사진
+</code></pre>
+<p>Claude Code 를 열고, <strong>이 폴더를 엽니다.</strong></p>
+<blockquote>
+<p>이 폴더 하나가 끝까지 갑니다. 만드는 것도 여기, 올리는 것도 여기입니다.</p>
+</blockquote>
+<hr />
+<h1>1 · 만들기</h1>
+<pre><code>실습용_명함.html 을 내가 올린 사진과 정보로 바꿔줘.
+다른 사람 정보는 하나도 남기지 말고 전부 지워줘.
+</code></pre>
+<p>다 되면 <strong>「내명함」 폴더에서 <code>실습용_명함.html</code> 을 더블클릭</strong>합니다.
+브라우저에 내 명함이 뜹니다. <strong>이 창을 닫지 말고 켜두세요.</strong></p>
+<hr />
+<h1>2 · 고치기</h1>
+<p>말로 고칩니다. 고치고 나서 <strong>브라우저에서 새로고침(<code>F5</code>)</strong> 하면 바로 보입니다.</p>
+<pre><code>예배 시간 넣어줘. 주일 오전 11시.
+</code></pre>
+<pre><code>지나온 길에 넣어줘. 청년부 사역 10년, 선교단체 간사 5년.
+</code></pre>
+<pre><code>아래 버튼을 주보, 헌금 안내, 오시는 길로 바꿔줘.
+</code></pre>
+<pre><code>색을 좀 더 진하게.
+</code></pre>
+<pre><code>방금 건 되돌려줘.
+</code></pre>
+<p><strong>말로 설명하기 어려우면 화면을 캡처해서 붙여넣고 「여기 이상해」 하면 됩니다.</strong></p>
+<blockquote>
+<p>고친다 → <strong>새로고침</strong> → 본다. 이것만 반복하시면 됩니다.</p>
+</blockquote>
+<hr />
+<h1>3 · 카톡 미리보기 ★꼭 하세요</h1>
+<p>이걸 안 하면 카톡에 주소만 덩그러니 갑니다. <strong>미리보기가 있어야 눌러봅니다.</strong></p>
+<p><strong>화면에 띄워드린 미리보기 그림을 캡처해서 붙여넣으세요.</strong>
+(<code>윈도우 키</code> + <code>Shift</code> + <code>S</code> → 드래그. 나눠드린 그림 파일을 그대로 끌어다 놓으셔도 됩니다.)</p>
+<p>그리고 이렇게 말합니다.</p>
+<pre><code>카톡에서 이렇게 미리보기 보이게 해줘.
+왼쪽에 내 사진, 오른쪽에 이름·교회·한 줄 소개.
+명함이랑 같은 색으로.
+</code></pre>
+<p>AI 가 알아서 만들어 줍니다. <strong>그림으로 보여주면 훨씬 정확합니다.</strong></p>
+<hr />
+<h1>4 · 인터넷에 올리기</h1>
+<ol>
+<li>브라우저에서 <strong><code>app.netlify.com/drop</code></strong></li>
+<li><strong>「내명함」 폴더를 통째로 끌어다 놓기</strong></li>
+<li>주소가 나옵니다</li>
+</ol>
+<p>주소 바꾸기 — <code>Site configuration</code> → <code>Change site name</code></p>
+<hr />
+<h1>5 · 카톡으로 보내기</h1>
+<p>주소를 카톡에 붙여넣으면 <strong>사진과 이름이 그림으로 뜹니다.</strong></p>
+<ul>
+<li>카톡 프로필 · 성도님께 보내는 문자 · 주보 QR · 인스타 소개란</li>
+</ul>
+<hr />
+<h2>나중에 고칠 때</h2>
+<pre><code>Claude Code 에서 고치기 → 새로고침으로 확인 → 폴더를 Netlify 에 다시 끌어다 놓기
+</code></pre>
+<p>같은 주소로 갱신됩니다.</p>
+<hr />
+<h2>막힐 때</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>고쳤는데 화면이 그대로예요</td>
+<td><strong>새로고침(<code>F5</code>)</strong> 하세요. 그래도 안 되면 <code>Ctrl</code>+<code>F5</code></td>
+</tr>
+<tr>
+<td>카톡에 그림이 안 떠요</td>
+<td>주소 끝에 <code>?1</code> 붙여서 다시 보내기</td>
+</tr>
+<tr>
+<td>미리보기가 안 만들어져요</td>
+<td>만들어진 그림을 캡처해서 다시 붙여넣고 <code>이걸 미리보기로 써줘</code></td>
+</tr>
+<tr>
+<td>사진이 안 보여요</td>
+<td>사진 파일이 <strong>「내명함」 폴더 안에</strong> 있는지 보세요</td>
+</tr>
+<tr>
+<td>코드가 끊겼어요</td>
+<td><code>이어서 줘</code></td>
+</tr>
+<tr>
+<td>글꼴이 이상해요</td>
+<td>인터넷 연결 확인</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1>이 방법으로 할 수 있는 것</h1>
+<p>오늘 배운 건 명함 만드는 법이 아닙니다.
+<strong>남이 만든 것을 내 것으로 바꾸는 법</strong>입니다.</p>
+<p>처음부터 짜지 않습니다. 코딩을 배우지도 않습니다.
+<strong>이미 만들어진 것을 받아서 바꿉니다.</strong> 그게 제일 빠릅니다.</p>
+<p>웹페이지든, 프로그램이든, 앱이든 <strong>방법은 하나</strong>입니다.</p>
+<pre><code>1  받는다              연구소 자료 · 다른 목사님이 나눈 것
+2  폴더에 넣고 Claude Code 로 연다
+3  &quot;내 걸로 바꿔줘. 다른 사람 정보는 전부 지우고.&quot;
+4  새로고침하며 보고, 말하고, 고친다
+5  올린다
+</code></pre>
+<p>교회 홈페이지도, 주보 앱도, 성경공부 자료도 같습니다.
+<strong>받아서 → 바꿔서 → 우리 교회에 맞게.</strong></p>
+<p>그리고 목사님이 바꾼 것도, 다음 분이 또 가져다 씁니다.
+연구소가 그렇게 나누고 있고, 오늘 이 명함도 그렇게 온 것입니다.</p>
+<p><strong>받은 대로, 다시 나누시면 됩니다.</strong></p>
+    </article>
+  </div>
+  <footer>이음 교육연구소 · 이 자료는 연구소가 직접 만들고 확인한 것입니다. 교회·교육 현장에서 자유롭게 활용하세요.</footer>
+</body>
+</html>

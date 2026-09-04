@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>설교 말씀 — {교회이름}</title>
+<meta name="description" content="주일 설교 영상을 언제든 다시 들으실 수 있습니다.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@400;600&display=swap" rel="stylesheet">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header" id="site-header"></header>
+
+<main id="main">
+
+  <div class="page-head">
+    <div class="wrap">
+      <h1>설교 말씀</h1>
+      <p>예배에 오지 못하셨어도, 언제든 다시 들으실 수 있습니다.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="grid grid-2" id="sermon-list"></div>
+      <p class="more-link">
+        <a class="btn btn-primary" id="youtube-link" href="https://www.youtube.com/" target="_blank" rel="noopener">유튜브 채널에서 전체 보기</a>
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer" id="site-footer"></footer>
+
+<script src="assets/js/site-data.js"></script>
+<script src="assets/js/main.js"></script>
+<script>
+  // 유튜브 채널 버튼 주소를 site-data.js 값으로 연결
+  (function () {
+    var a = document.getElementById('youtube-link');
+    if (a && typeof 교회정보 !== 'undefined' && 교회정보.유튜브채널) {
+      a.href = 교회정보.유튜브채널;
+    } else if (a) {
+      a.style.display = 'none';
+    }
+  })();
+</script>
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>안전·개인정보·윤리 가이드 | 이음 교육연구소 교육자료</title>
+  <meta name="description" content="교회학교에서 AI를 쓸 때 지킬 안전·개인정보·윤리 기준">
+  <link rel="stylesheet" href="../../tokens.css">
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg-page); color: var(--ink); font-family: var(--font-family-base); font-size: var(--font-size-body); line-height: 1.75; }
+    .wrap { width: min(860px, calc(100% - 32px)); margin: 0 auto; }
+    .top { padding: 18px 0; font-size: var(--font-size-small); color: var(--ink-secondary); display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+    .top a { color: var(--primary-blue-deep); font-weight: var(--font-weight-strong); text-decoration: none; }
+    .doc { background: var(--bg-surface); border: 1px solid rgba(var(--primary-blue-rgb), .14); border-radius: var(--radius-xl); box-shadow: var(--shadow-frame); padding: clamp(22px, 5vw, 48px); margin: 6px 0 40px; word-break: keep-all; overflow-wrap: anywhere; }
+    .doc h1 { font-size: clamp(24px, 4vw, 34px); line-height: 1.2; letter-spacing: -.03em; margin: 0 0 18px; }
+    .doc h2 { font-size: 22px; margin: 34px 0 10px; padding-top: 16px; border-top: 1px solid rgba(var(--primary-blue-rgb), .12); color: var(--primary-blue-deep); }
+    .doc h3 { font-size: 18px; margin: 24px 0 8px; }
+    .doc p, .doc li { color: var(--ink); }
+    .doc blockquote { margin: 14px 0; padding: 12px 16px; background: var(--bg-panel); border-left: 4px solid var(--primary-blue-light); border-radius: var(--radius-sm); }
+    .doc blockquote p { margin: 4px 0; }
+    .doc pre { background: #101A3D; color: #F5F7FA; padding: 14px 16px; border-radius: var(--radius-sm); overflow-x: auto; font-size: 14px; line-height: 1.55; }
+    .doc code { font-family: ui-monospace, Consolas, monospace; font-size: .95em; background: var(--bg-panel); padding: 1px 5px; border-radius: 4px; }
+    .doc pre code { background: none; padding: 0; }
+    .doc table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 15px; display: block; overflow-x: auto; }
+    .doc th, .doc td { border: 1px solid rgba(var(--primary-blue-rgb), .18); padding: 8px 10px; text-align: left; vertical-align: top; }
+    .doc th { background: var(--bg-panel); }
+    .doc a { color: var(--primary-blue-deep); }
+    .doc img { max-width: 100%; }
+    .meta { margin: 0 0 22px; color: var(--ink-tertiary); font-size: var(--font-size-small); }
+    footer { padding: 10px 0 50px; text-align: center; color: var(--ink-secondary); font-size: var(--font-size-small); }
+    @media print { .top, footer { display: none; } .doc { box-shadow: none; border: 0; padding: 0; } }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="top"><a href="../../index.html#materials-title">← 이음 교육연구소 교육자료</a><span>·</span><span>② 이음 앱 사용 안내</span></div>
+    <article class="doc">
+      <p class="meta">교사동행GPT 지식자료</p>
+<h1>안전 개인정보 윤리 가이드</h1>
+<p>이 파일의 목적: 교사동행 GPT 사용 중 반드시 지켜야 할 개인정보, 안전, 윤리 원칙을 정리한다.
+교회학교 자료는 아이와 가정의 민감한 삶을 포함할 수 있으므로 보호가 최우선이다.
+AI 답변은 참고 초안이며 최종 판단은 성경, 교회, 담당 교역자, 보호 절차를 따른다.</p>
+<h2>1. GPT에 넣으면 안 되는 정보</h2>
+<p>다음 정보는 입력하지 않는다.</p>
+<ul>
+<li>학생 실명과 별명, 얼굴 사진, 영상, 음성</li>
+<li>전화번호, 주소, 학교, 반, 생년월일, 가족관계</li>
+<li>출석부, 등록카드, 새가족 카드, 반 배정표</li>
+<li>기도제목 원문, 상담기록, 심방기록</li>
+<li>가정형편, 이혼, 사별, 경제 문제, 학대 의심 정황</li>
+<li>질병, 장애, 정신건강, 약물, 병원 정보</li>
+<li>성적표, 시험 결과, 진로 상담 세부 내용</li>
+<li>특정 교회 내부 갈등, 실명 사건, 징계, 분쟁</li>
+</ul>
+<p>필요할 때는 "[학생]", "[학부모]", "[부서]", "[상황]"처럼 익명 변수로 바꾼다.</p>
+<h2>2. 학생 개인정보 보호 원칙</h2>
+<p>아이의 정보는 사역 편의를 위해서가 아니라 돌봄을 위해 최소한으로 다룬다.</p>
+<p>원칙:</p>
+<ul>
+<li>최소 수집: 꼭 필요한 정보만 사용한다.</li>
+<li>목적 제한: 공과, 돌봄, 안전 목적 외에는 사용하지 않는다.</li>
+<li>공유 제한: 교사 단톡방에도 민감정보를 올리지 않는다.</li>
+<li>익명화: 사례를 나눌 때 이름, 학교, 가족 정보, 특정 사건을 제거한다.</li>
+<li>보관 주의: 개인 기기, 클라우드, AI 도구에 민감정보를 저장하지 않는다.</li>
+</ul>
+<h2>3. 기도제목과 상담기록 처리 원칙</h2>
+<p>기도제목은 영적 돌봄 자료이지만 동시에 민감정보일 수 있다. 아이가 말한 내용을 허락 없이 공개하거나 GPT에 입력하지 않는다.</p>
+<p>처리 방식:</p>
+<ul>
+<li>"친구와 갈등이 있는 한 학생"처럼 일반화한다.</li>
+<li>구체적 사건, 날짜, 이름, 가족 상황은 삭제한다.</li>
+<li>공개 기도 시간에는 아이가 직접 공개한 범위보다 더 말하지 않는다.</li>
+<li>상담 내용은 교사 개인이 혼자 보관하지 않고 부서 지침을 따른다.</li>
+<li>위험 신호가 있으면 비밀 약속보다 안전 보호를 우선한다.</li>
+</ul>
+<h2>4. 위기 상황 대응 원칙</h2>
+<p>다음 상황은 교사 개인이 혼자 해결하지 않는다.</p>
+<ul>
+<li>자해, 자살 암시</li>
+<li>학대, 방임, 폭력 의심</li>
+<li>성적 피해 또는 가해 관련 고백</li>
+<li>심각한 우울, 공황, 식이 문제, 중독 위험</li>
+<li>가출, 범죄 피해, 온라인 협박</li>
+<li>지속적 따돌림이나 신체적 위협</li>
+</ul>
+<p>대응 원칙:</p>
+<ol>
+<li>아이의 말을 차분히 듣고 즉시 판단하거나 추궁하지 않는다.</li>
+<li>"네 잘못이 아니고, 안전을 위해 믿을 만한 어른과 함께 도와야 해"라고 말한다.</li>
+<li>담당 교역자와 부서 책임자에게 즉시 알린다.</li>
+<li>교회가 정한 보호 절차와 법적 신고 의무를 따른다.</li>
+<li>GPT에 세부 내용을 입력하지 않는다.</li>
+</ol>
+<h2>5. AI 답변을 성경 해석의 최종 권위로 사용하지 않는 원칙</h2>
+<p>AI는 공과 초안, 질문, 활동 아이디어를 도울 수 있지만 성경 해석과 교리 판단의 최종 권위가 아니다.</p>
+<p>주의할 영역:</p>
+<ul>
+<li>구원론, 세례, 성찬, 은사, 종말론 등 교단별 차이가 있는 주제</li>
+<li>특정 본문에 대한 논쟁적 해석</li>
+<li>상담과 치유에 대한 단정적 조언</li>
+<li>의학, 법률, 심리치료가 필요한 문제</li>
+</ul>
+<p>이런 경우에는 "교회와 담당 교역자의 지도를 따를 영역"으로 안내한다.</p>
+<h2>6. 교사와 교역자의 최종 검토 원칙</h2>
+<p>GPT가 만든 자료는 반드시 사람이 검토한다.</p>
+<p>검토 질문:</p>
+<ul>
+<li>성경 본문을 왜곡하지 않았는가?</li>
+<li>우리 교회 신학과 부서 방향에 맞는가?</li>
+<li>아이들의 연령과 실제 상황에 적절한가?</li>
+<li>개인정보나 특정인을 떠올리게 하는 사례가 없는가?</li>
+<li>새친구, 조용한 아이, 상처 입은 아이에게 안전한 표현인가?</li>
+<li>부모에게 부담이나 죄책감을 과하게 주지 않는가?</li>
+</ul>
+<h2>7. 언어 윤리</h2>
+<p>교회학교 언어는 아이의 정체성을 세워야 한다.</p>
+<p>피할 표현:</p>
+<ul>
+<li>"문제아", "믿음 없는 아이", "관리 대상"</li>
+<li>"요즘 애들은 안 된다"</li>
+<li>"부모가 문제다"</li>
+<li>"너 때문에 반 분위기가 망가졌다"</li>
+</ul>
+<p>권장 표현:</p>
+<ul>
+<li>"도움이 필요한 아이"</li>
+<li>"마음을 여는 데 시간이 필요한 아이"</li>
+<li>"함께 세워 가야 할 가정"</li>
+<li>"안전한 경계가 필요한 상황"</li>
+<li>"작은 성장의 흔적"</li>
+</ul>
+<h2>8. 자료 공개 전 점검</h2>
+<p>Custom GPT 지식파일, 교사교육 자료, 학부모 안내문으로 공개하기 전 다음을 확인한다.</p>
+<ul>
+<li>실명 삭제</li>
+<li>연락처 삭제</li>
+<li>특정 교회 내부 사정 삭제 또는 익명화</li>
+<li>상담/기도제목 원문 삭제</li>
+<li>사진과 영상 제외</li>
+<li>민감한 사례는 가상 사례로 재작성</li>
+<li>담당 교역자 검토 필요 문구 표시</li>
+</ul>
+    </article>
+  </div>
+  <footer>이음 교육연구소 · 이 자료는 연구소가 직접 만들고 확인한 것입니다. 교회·교육 현장에서 자유롭게 활용하세요.</footer>
+</body>
+</html>

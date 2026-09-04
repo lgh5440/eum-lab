@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>E:UM Camp — 공유용 수련회 운영 시스템(오픈 템플릿) 안내 | 이음 교육연구소 교육자료</title>
+  <meta name="description" content="공유용 템플릿, 가상 시연 데이터, 3분 체험, 셋업 방법">
+  <link rel="stylesheet" href="../../tokens.css">
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg-page); color: var(--ink); font-family: var(--font-family-base); font-size: var(--font-size-body); line-height: 1.75; }
+    .wrap { width: min(860px, calc(100% - 32px)); margin: 0 auto; }
+    .top { padding: 18px 0; font-size: var(--font-size-small); color: var(--ink-secondary); display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+    .top a { color: var(--primary-blue-deep); font-weight: var(--font-weight-strong); text-decoration: none; }
+    .doc { background: var(--bg-surface); border: 1px solid rgba(var(--primary-blue-rgb), .14); border-radius: var(--radius-xl); box-shadow: var(--shadow-frame); padding: clamp(22px, 5vw, 48px); margin: 6px 0 40px; word-break: keep-all; overflow-wrap: anywhere; }
+    .doc h1 { font-size: clamp(24px, 4vw, 34px); line-height: 1.2; letter-spacing: -.03em; margin: 0 0 18px; }
+    .doc h2 { font-size: 22px; margin: 34px 0 10px; padding-top: 16px; border-top: 1px solid rgba(var(--primary-blue-rgb), .12); color: var(--primary-blue-deep); }
+    .doc h3 { font-size: 18px; margin: 24px 0 8px; }
+    .doc p, .doc li { color: var(--ink); }
+    .doc blockquote { margin: 14px 0; padding: 12px 16px; background: var(--bg-panel); border-left: 4px solid var(--primary-blue-light); border-radius: var(--radius-sm); }
+    .doc blockquote p { margin: 4px 0; }
+    .doc pre { background: #101A3D; color: #F5F7FA; padding: 14px 16px; border-radius: var(--radius-sm); overflow-x: auto; font-size: 14px; line-height: 1.55; }
+    .doc code { font-family: ui-monospace, Consolas, monospace; font-size: .95em; background: var(--bg-panel); padding: 1px 5px; border-radius: 4px; }
+    .doc pre code { background: none; padding: 0; }
+    .doc table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 15px; display: block; overflow-x: auto; }
+    .doc th, .doc td { border: 1px solid rgba(var(--primary-blue-rgb), .18); padding: 8px 10px; text-align: left; vertical-align: top; }
+    .doc th { background: var(--bg-panel); }
+    .doc a { color: var(--primary-blue-deep); }
+    .doc img { max-width: 100%; }
+    .meta { margin: 0 0 22px; color: var(--ink-tertiary); font-size: var(--font-size-small); }
+    footer { padding: 10px 0 50px; text-align: center; color: var(--ink-secondary); font-size: var(--font-size-small); }
+    @media print { .top, footer { display: none; } .doc { box-shadow: none; border: 0; padding: 0; } }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="top"><a href="../../index.html#materials-title">← 이음 교육연구소 교육자료</a><span>·</span><span>② 이음 앱 사용 안내</span></div>
+    <article class="doc">
+      <p class="meta">eum-camp 저장소 README · 상세 문서 링크는 GitHub 저장소로 연결</p>
+<h1>🏕️ E:UM Camp — 공유용 수련회 운영 시스템 (오픈 템플릿)</h1>
+<blockquote>
+<p><strong>이 저장소는 어느 교회·단체나 무료로 가져다 쓰는 공유용 템플릿입니다.</strong>
+화면에 보이는 행사 정보·교회·참가자는 모두 <strong>가상 시연 데이터</strong>입니다.
+본인 행사 데이터로 교체하는 방법은 아래 셋업 가이드에 있습니다.</p>
+</blockquote>
+<h3>👀 먼저 체험해보기 (셋업 없이 3분)</h3>
+<p>👉 <strong><a href="https://eum-camp-template.web.app">데모 사이트 바로가기</a></strong></p>
+<ul>
+<li>가상 50명(학생 25 + 교사 8 + 진행팀 17) 데이터 미리 채워둠</li>
+<li>참가자 명단·교회별 신청·조 편성·방 배정·체크인·일정 등 <strong>실제 운영 화면 그대로</strong> 둘러보기 가능</li>
+<li>데이터는 모두 가상이라 자유롭게 수정해봐도 OK</li>
+</ul>
+<p>React + TypeScript + Vite 기반의 청소년 수련회·연합 행사 운영 대시보드.
+Firebase 무료(Spark Plan)로 <strong>1,000명 규모까지 비용 0원</strong>.</p>
+<h2>🚀 다른 교회에서 도입하는 법 — 2가지</h2>
+<h3>1. 🤖 AI로 30분 만에 설치 ✅ 가장 쉬움 — 코딩 몰라도 OK</h3>
+<p><strong>Claude Code</strong> 또는 <strong>OpenAI Codex</strong> 데스크탑 앱(둘 다 2026-04 출시) 하나만 깔면 끝 — VS Code 같은 다른 에디터 불필요.
+명령어·환경변수·Firebase Console 클릭을 전부 AI가 한국어로 대신 안내합니다.</p>
+<p>👉 <strong><a href="https://github.com/lgh5440/eum-camp/blob/main/docs/AI_SETUP_GUIDE.md">AI 설치 가이드 (비기술자용, 2026-05 기준 최신)</a></strong></p>
+<blockquote>
+<p>💸 비용: Claude Pro $20/월 또는 ChatGPT Plus $20/월 1회 결제로 설치 + 다른 교회 추가 셋업까지 가능. 이미 둘 중 하나 구독 중이면 추가 비용 0원. 시스템 자체 운영은 영구 무료(Firebase Spark).</p>
+</blockquote>
+<h3>2. 🛠️ 손으로 직접 설치 (35~45분, IT에 익숙한 분)</h3>
+<p>명령어를 직접 입력해서 설치하는 전통적인 방식.</p>
+<p>👉 <strong><a href="https://github.com/lgh5440/eum-camp/blob/main/docs/SETUP_GUIDE.md">수동 설치 가이드</a></strong></p>
+<h2>주요 기능</h2>
+<ul>
+<li>메인 대시보드: 인원, 배정률, 체크리스트, 안전 현황 요약</li>
+<li>참가자 관리: 참가자 목록, 검색, 추가/수정, CSV 가져오기/내보내기</li>
+<li>교회별 확인: 교회별 신청/확정/참가비 상태 점검</li>
+<li>조/방/차량 배정: 운영 배정 현황 관리</li>
+<li>현장 체크인/현장 운영 모드: 당일 도착 확인과 모바일 현장용 화면</li>
+<li>문서/출력 센터: 명단, 일정표, 운영 자료 확인</li>
+</ul>
+<h2>실행</h2>
+<pre><code class="language-bash">npm install
+npm run dev
+</code></pre>
+<p>개발 서버 기본 주소는 <code>http://localhost:5173</code> 입니다.</p>
+<h2>온라인 공동 사용</h2>
+<p>Firebase 설정값을 <code>.env.local</code>에 넣으면 여러 기기에서 참가자 명단, 체크리스트, 현장 체크, 교회별 확인, 신청 대기함, 변경 내역이 Firestore로 동기화됩니다.</p>
+<p>Google Forms는 응답 Sheet CSV URL을 <code>온라인 신청 대기함</code>에 넣어 동기화하고, Naver Forms는 CSV 파일 가져오기로 처리합니다. 자세한 설정은 <a href="https://github.com/lgh5440/eum-camp/blob/main/ONLINE_SETUP.md"><code>ONLINE_SETUP.md</code></a>를 확인하세요.</p>
+<p>Firebase Hosting 배포 파일은 <code>firebase.json</code>, Firestore 보안 규칙은 <code>firestore.rules</code>에 있습니다. 배포 순서는 <a href="https://github.com/lgh5440/eum-camp/blob/main/docs/FIREBASE_DEPLOY.md"><code>docs/FIREBASE_DEPLOY.md</code></a>를 확인하세요.</p>
+<p>GitHub Actions 자동 배포는 <a href="https://github.com/lgh5440/eum-camp/blob/main/docs/GITHUB_FIREBASE_CI.md"><code>docs/GITHUB_FIREBASE_CI.md</code></a>, 현장 휴대폰 사용 안내는 <a href="https://github.com/lgh5440/eum-camp/blob/main/docs/MOBILE_FIELD_USE.md"><code>docs/MOBILE_FIELD_USE.md</code></a>에 정리했습니다.</p>
+<h2>검증</h2>
+<pre><code class="language-bash">npm run lint
+npm run build
+</code></pre>
+<h2>시연용 가상 데이터</h2>
+<p>이 저장소에 포함된 행사 정보·교회·참가자는 모두 <strong>가상 시연 데이터</strong>입니다.
+- 행사명: 「샘플 수련회 (예시)」
+- 지방회: 「예시지방회」
+- 교회: 「가람교회·새벽이슬교회·푸른초장교회…」 (실제 존재하지 않는 가상 이름)
+- 참가자·교사: 가상 인물 (모든 연락처는 더미 패턴)</p>
+<p>본인 행사 정보로 교체하는 방법:
+1. 앱 첫 실행 시 <strong>행사 설정 마법사</strong>(EventSetupWizard)가 자동으로 뜸 → 본인 행사 정보 입력
+2. 좌측 메뉴 <strong>「행사·운영 설정」</strong> 에서 언제든 수정 가능
+3. <strong>「교회별 신청 현황」</strong> 에서 가상 교회 10곳 삭제 → 본인 지방회 교회 추가
+4. 시드 코드 자체를 비우려면 <code>src/data/mockData.ts</code> 의 시드 배열을 <code>[]</code> 으로 변경</p>
+<p>자세한 흐름은 <a href="https://github.com/lgh5440/eum-camp/blob/main/docs/SETUP_GUIDE.md"><code>docs/SETUP_GUIDE.md</code></a> 의 <strong>6. 첫 사용</strong> 단계를 참고하세요.</p>
+    </article>
+  </div>
+  <footer>이음 교육연구소 · 이 자료는 연구소가 직접 만들고 확인한 것입니다. 교회·교육 현장에서 자유롭게 활용하세요.</footer>
+</body>
+</html>

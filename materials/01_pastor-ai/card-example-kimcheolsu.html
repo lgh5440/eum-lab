@@ -1,0 +1,163 @@
+<title>성령교회 링크명함</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    margin:0; min-height:100%; font-family:'Pretendard',-apple-system,sans-serif;
+    background:linear-gradient(180deg,#CFE6FF 0%,#EAF3FF 45%,#F8FBFF 100%);
+    display:flex; justify-content:center; padding:56px 20px 70px; overflow-x:hidden;
+  }
+
+  .page{ width:100%; max-width:420px; position:relative; }
+
+  /* 구름 */
+  .cloud{ position:fixed; z-index:-1; opacity:.8; filter:blur(.3px); }
+  .cloud svg{ display:block; }
+  .c1{ top:6%; left:-6%; width:180px; animation:cdrift 26s ease-in-out infinite; }
+  .c2{ top:16%; right:-8%; width:150px; animation:cdrift 30s ease-in-out infinite reverse; }
+  .c3{ bottom:10%; left:-4%; width:130px; animation:cdrift 22s ease-in-out infinite; }
+  @keyframes cdrift{ 0%,100%{transform:translateX(0)} 50%{transform:translateX(18px)} }
+  @media (prefers-reduced-motion: reduce){ .cloud{animation:none} }
+
+  /* 무지개 테두리 프레임 */
+  .frame{
+    border-radius:32px; padding:3px;
+    background-image:linear-gradient(135deg, #FF9AD8, #FFD98C, #8CC7FF, #18DDEB, #B98CFF);
+    box-shadow:0 30px 60px -26px rgba(31,95,217,.35);
+  }
+  .card{ background:#fff; border-radius:29px; padding:38px 28px 28px; text-align:center; position:relative; overflow:hidden; }
+
+  .cat{ font-size:12.5px; font-weight:700; color:#2F73F2; letter-spacing:.03em; }
+
+  /* 사진 */
+  .angel-wrap{ display:flex; justify-content:center; margin:18px 0 10px; position:relative; }
+  .angel-glow{
+    position:absolute; top:-10%; width:260px; height:260px; border-radius:50%;
+    background:radial-gradient(circle, rgba(255,246,214,.9), rgba(255,246,214,.25) 55%, transparent 75%);
+    filter:blur(2px); z-index:0;
+  }
+  .angel{ position:relative; z-index:1; width:220px; height:auto; display:block;
+    filter:drop-shadow(0 18px 30px rgba(31,95,217,.28));
+    animation:fly 4.5s ease-in-out infinite; }
+  @keyframes fly{ 0%,100%{ transform:translateY(0);} 50%{ transform:translateY(-14px);} }
+  @media (prefers-reduced-motion: reduce){ .angel{animation:none} }
+
+  h1{ margin:0; font-size:26px; font-weight:800; letter-spacing:-.01em; color:#101A3D; }
+  .role{ margin:7px 0 0; font-size:14.5px; font-weight:600; color:#2F73F2; }
+  .tagline{ margin:14px 0 0; font-size:13.5px; line-height:1.7; color:#5C6A93; }
+
+  .rule{ height:1px; background:#E5EEFB; margin:24px 0 20px; }
+
+  .quick{ display:flex; gap:12px; justify-content:center; }
+  .quick .item{ display:flex; flex-direction:column; align-items:center; gap:8px; }
+  .quick a{ text-decoration:none; }
+  .quick .lb{ font-size:11.5px; font-weight:700; color:#182349; }
+  .orb{ position:relative; width:56px; height:56px; border-radius:50%; display:flex; align-items:center; justify-content:center;
+    background:radial-gradient(circle at 30% 26%, #ffffff, #EAF3FF 42%, #BFD9FF 76%, #8FB8FF 100%);
+    box-shadow: inset -5px -7px 12px rgba(31,95,217,.30), inset 3px 4px 7px rgba(255,255,255,.95), 0 12px 20px -8px rgba(47,115,242,.5);
+    transition:transform .16s ease;
+  }
+  .orb::after{ content:""; position:absolute; top:14%; left:22%; width:32%; height:22%; border-radius:50%; background:rgba(255,255,255,.85); filter:blur(2.5px); }
+  .orb svg{ position:relative; z-index:1; width:24px; height:24px; }
+  .item a:hover .orb{ transform:translateY(-3px); }
+  .item a:focus-visible .orb{ outline:2px solid #2F73F2; outline-offset:2px; }
+
+  /* 화면에 보이는 연락처 */
+  .contact{ margin:18px 0 0; display:flex; flex-direction:column; gap:7px; align-items:center; }
+  .contact .line{ margin:0; font-size:13.5px; color:#3A4568; font-weight:600; }
+  .contact .line b{ color:#8592B8; font-size:11.5px; font-weight:700; margin-right:6px; letter-spacing:.04em; }
+  .contact a{ color:#1F5FD9; text-decoration:none; }
+  .contact a:hover{ text-decoration:underline; }
+
+  .bio{ text-align:left; margin-bottom:20px; }
+  .bio-h{ margin:0 0 6px; font-size:11px; font-weight:700; color:#8592B8; letter-spacing:.04em; }
+  .bio-tx{ margin:0; font-size:13px; line-height:1.7; color:#3A4568; }
+
+  .apps{ display:flex; flex-wrap:wrap; gap:8px; margin-bottom:20px; }
+  .app-chip{
+    flex:1; min-width:64px; display:flex; flex-direction:column; align-items:center; gap:5px;
+    text-align:center; text-decoration:none; color:#1F5FD9;
+    font-size:12px; font-weight:700; padding:12px 6px; border-radius:12px;
+    border:1px solid #D7E5FA; background:#F8FBFF; transition:transform .16s ease, border-color .16s ease;
+  }
+  .app-chip .aicon{ width:20px; height:20px; }
+  .app-chip small{ font-size:9.5px; font-weight:600; color:#7C95D9; }
+  .app-chip:hover{ transform:translateY(-2px); border-color:#2F73F2; }
+  .app-chip:focus-visible{ outline:2px solid #2F73F2; outline-offset:2px; }
+  .app-chip.disabled{ color:#A7B2CE; background:#F3F6FC; cursor:default; }
+  .app-chip.disabled small{ font-size:9.5px; font-weight:600; }
+
+  .cta{
+    display:flex; align-items:center; justify-content:center; gap:8px; width:100%; margin-top:22px;
+    padding:16px 18px; border:none; cursor:pointer; border-radius:16px;
+    font-family:inherit; font-size:15px; font-weight:700; color:#fff;
+    background:linear-gradient(135deg,#2F73F2,#1F5FD9); box-shadow:0 14px 26px -12px rgba(47,115,242,.5);
+  }
+  .cta:hover{ transform:translateY(-2px); }
+  .made{ margin-top:18px; font-size:12px; color:#8FA0C9; }
+</style>
+
+<div class="cloud c1"><svg viewBox="0 0 200 90" width="180"><ellipse cx="60" cy="55" rx="55" ry="30" fill="#fff"/><ellipse cx="110" cy="40" rx="45" ry="34" fill="#fff"/><ellipse cx="150" cy="58" rx="40" ry="24" fill="#fff"/></svg></div>
+<div class="cloud c2"><svg viewBox="0 0 200 90" width="150"><ellipse cx="60" cy="55" rx="50" ry="28" fill="#fff"/><ellipse cx="110" cy="42" rx="42" ry="30" fill="#fff"/></svg></div>
+<div class="cloud c3"><svg viewBox="0 0 200 90" width="130"><ellipse cx="70" cy="50" rx="48" ry="26" fill="#fff"/><ellipse cx="120" cy="40" rx="36" ry="26" fill="#fff"/></svg></div>
+
+<div class="page">
+  <div class="frame">
+    <div class="card">
+      <p class="cat">성령교회</p>
+
+      <div class="angel-wrap">
+        <div class="angel-glow"></div>
+        <img class="angel" src="photo.jpg" alt="성령교회 김철수 담임목사">
+      </div>
+
+      <h1>김철수</h1>
+      <p class="role">성령교회 담임목사</p>
+      <p class="tagline">말씀과 기도로 성도를 섬깁니다</p>
+
+      <div class="rule"></div>
+
+      <div class="quick">
+        <div class="item"><a href="tel:01012345678"><div class="orb"><svg viewBox="0 0 24 24" fill="none"><path d="M6 4c1-1 2-1 3 0l2 2c1 1 1 2-1 4l-1 1c1 2 2 3 4 4l1-1c2-2 3-2 4-1l2 2c1 1 1 2-1 3-3 3-8 2-12-2S3 7 6 4z" fill="#1F5FD9"/></svg></div><span class="lb">전화</span></a></div>
+        <div class="item"><a href="sms:01012345678"><div class="orb"><svg viewBox="0 0 24 24" fill="none"><path d="M4 5h16a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H10l-4.2 4v-4H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1z" stroke="#1F5FD9" stroke-width="1.8" fill="none" stroke-linejoin="round"/><circle cx="8" cy="10.5" r="1.1" fill="#1F5FD9"/><circle cx="12" cy="10.5" r="1.1" fill="#1F5FD9"/><circle cx="16" cy="10.5" r="1.1" fill="#1F5FD9"/></svg></div><span class="lb">문자</span></a></div>
+        <div class="item"><a href="mailto:grace@church.kr"><div class="orb"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="6" width="18" height="12" rx="2.5" fill="none" stroke="#1F5FD9" stroke-width="1.8"/><path d="M4 7.5l8 6 8-6" stroke="#1F5FD9" stroke-width="1.8" fill="none" stroke-linejoin="round"/></svg></div><span class="lb">메일</span></a></div>
+      </div>
+
+      <div class="contact">
+        <p class="line"><b>전화</b><a href="tel:01012345678">010-1234-5678</a></p>
+        <p class="line"><b>메일</b><a href="mailto:grace@church.kr">grace@church.kr</a></p>
+        <p class="line"><b>예배</b>주일 오전 11시</p>
+      </div>
+
+      <div class="rule"></div>
+
+      <div class="bio">
+        <p class="bio-h">소개</p>
+        <p class="bio-tx">
+          <b>지금 하는 일</b><br>
+          성령교회 담임목사<br>
+          총회신학대학원 졸업<br><br>
+          <b>지나온 길</b><br>
+          청년부 사역 10년<br>
+          선교단체 간사 5년
+        </p>
+      </div>
+
+      <p class="bio-h" style="margin-top:2px">교회 안내</p>
+      <div class="apps">
+        <!-- 아래 href="#" 자리에 나중에 주소(링크)를 넣으세요 -->
+        <a class="app-chip" href="#"><svg class="aicon" viewBox="0 0 24 24" fill="none"><rect x="4" y="3" width="16" height="18" rx="2" stroke="#1F5FD9" stroke-width="1.8"/><path d="M8 8h8M8 12h8M8 16h5" stroke="#1F5FD9" stroke-width="1.8" stroke-linecap="round"/></svg>주보</a>
+        <a class="app-chip" href="#"><svg class="aicon" viewBox="0 0 24 24" fill="none"><path d="M12 20s-7-4.3-7-9a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 4.7-7 9-7 9z" stroke="#1F5FD9" stroke-width="1.8" stroke-linejoin="round"/></svg>헌금 안내</a>
+        <a class="app-chip" href="#"><svg class="aicon" viewBox="0 0 24 24" fill="none"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z" stroke="#1F5FD9" stroke-width="1.8" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.6" stroke="#1F5FD9" stroke-width="1.8"/></svg>오시는 길</a>
+      </div>
+
+      <button class="cta" type="button">＋ 연락처 저장하기</button>
+      <p class="made">이 명함은 바이브코딩으로 만들었습니다</p>
+    </div>
+  </div>
+</div>

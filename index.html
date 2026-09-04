@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>이음 교육연구소 | E:UM Lab</title>
-  <meta name="description" content="교회와 교육 현장을 위한 이음 교육연구소의 앱과 공개 교육자료입니다.">
+  <meta name="description" content="교회와 교육 현장을 위한 이음 교육연구소의 앱 소개와, 연구소가 직접 만들고 확인한 교육자료입니다.">
   <link rel="stylesheet" href="tokens.css">
   <style>
     * { box-sizing: border-box; }
@@ -38,6 +38,12 @@
     .material-card { padding: 15px 16px; border-radius: var(--radius-sm); }
     .material-card h3 { font-size: 14px; word-break: keep-all; }
     .material-card p { font-size: var(--font-size-small); }
+    .intro { position: relative; z-index: 1; margin: 22px 0 0; max-width: 760px; color: var(--ink-secondary); font-size: clamp(15px, 1.7vw, 17px); line-height: 1.7; word-break: keep-all; }
+    .section-sub { margin: 4px 0 0; color: var(--ink-tertiary); font-size: var(--font-size-small); }
+    .material-card .fmt { display: inline-block; margin-top: 10px; color: var(--primary-blue-deep); font-size: 12px; font-weight: var(--font-weight-strong); text-decoration: none; }
+    .material-card .fmt:hover { text-decoration: underline; }
+    .material-card .alt { display: block; margin-top: 4px; font-size: 12px; }
+    .material-card .alt a { color: var(--ink-secondary); }
     footer { padding: 46px 0 64px; color: var(--ink-secondary); text-align: center; }
     footer a { color: var(--primary-blue-deep); font-weight: var(--font-weight-strong); }
     @media (max-width: 760px) { .wrap { width: min(100% - 24px, 620px); } .grid, .material-grid { grid-template-columns: 1fr; } .section-head { display: block; } .section-note { margin-top: 8px; } .hero-card { padding: 28px 22px; } }
@@ -46,6 +52,7 @@
 <body>
   <header class="hero"><div class="wrap"><div class="hero-card">
     <div class="brand"><img src="assets/eum-logo.png" alt="이음 E:UM 브랜드 로고"><div><p class="eyebrow">E:UM EDUCATION LAB</p><h1>이음 교육연구소</h1><p class="tagline">하나님과 사람을, 배움과 사역을 잇습니다.</p></div></div>
+    <p class="intro">이음 교육연구소는 교회와 교육 현장을 위해 직접 만든 앱을 소개하고, 그 현장에서 바로 쓸 수 있는 교육자료를 나누는 곳입니다. 스쿨·캠프·플레이·달란트로드·포토·링크명함 여섯 개의 앱은 교회학교와 사역의 일상을 돕도록 설계했습니다. 교육자료는 연구소가 직접 만들고 확인한 것만 올립니다.</p>
   </div></div></header>
 
   <main class="wrap">
@@ -57,6 +64,33 @@
         <a class="app-card" href="https://lgh5440.github.io/talentroad-test/" target="_blank" rel="noopener"><img class="app-icon" src="assets/talentroad.png" alt="달란트로드 앱 아이콘"><h3>달란트로드</h3><p>은사와 성향을 사역의 언어로 발견하는 여정</p><span class="go">앱 살펴보기 ↗</span></a>
         <a class="app-card" href="https://lgh5440.github.io/eum-photo/" target="_blank" rel="noopener"><img class="app-icon" src="assets/photo.png" alt="포토 앱 아이콘"><h3>포토</h3><p>교회 행사의 순간을 정리하고 나누는 도구</p><span class="go">앱 살펴보기 ↗</span></a>
         <a class="app-card" href="https://lgh5440.github.io/eum/" target="_blank" rel="noopener"><img class="app-icon" src="assets/eum-brand.png" alt="링크명함 앱 아이콘"><h3>링크명함</h3><p>나와 사역을 한 장에 연결하는 디지털 명함</p><span class="go">앱 살펴보기 ↗</span></a>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="materials-title"><div class="section-head"><div><h2 id="materials-title">교육자료</h2><p class="section-sub">연구소가 직접 만들고 확인한 자료만 올립니다. 카드를 누르면 바로 보거나 내려받을 수 있습니다.</p></div></div>
+      <div class="materials">
+        <div class="material-group"><h3>① 목회자를 위한 AI·바이브코딩 교육</h3>
+          <div class="material-grid">
+            <div class="material-card"><h3>목회자를 위한 AI&amp;바이브코딩 실전 입문 — 강의 슬라이드(43장)</h3><p>2026년 8월 90분 강의에서 실제로 쓴 슬라이드. 브라우저에서 바로 열립니다.</p><a class="fmt" href="materials/01_pastor-ai/slides-pastor-ai-vibecoding.html" target="_blank" rel="noopener">바로보기 ↗</a></div>
+            <div class="material-card"><h3>강의 전 사전안내</h3><p>수강 전에 준비할 것을 정리한 참가자 배포 문서.</p><a class="fmt" href="materials/01_pastor-ai/pre-lecture-guide.html" target="_blank" rel="noopener">바로보기 ↗</a></div>
+            <div class="material-card"><h3>실습 따라하기 — 링크명함 만들기</h3><p>강의 실습을 혼자서도 따라 할 수 있게 쓴 참가자용 안내.</p><a class="fmt" href="materials/01_pastor-ai/hands-on-guide.html" target="_blank" rel="noopener">바로보기 ↗</a><span class="alt"><a href="materials/01_pastor-ai/hands-on-guide.md" download>원본(md) 내려받기</a></span></div>
+            <div class="material-card"><h3>실습용 명함 템플릿(예시 인물 김철수)</h3><p>강의 실습에 쓰는 명함 HTML 템플릿. 가상 인물로 채워져 있어 내려받아 내 정보로 바꿔 쓰면 됩니다.</p><a class="fmt" href="materials/01_pastor-ai/card-example-kimcheolsu.html" target="_blank" rel="noopener">템플릿 바로보기 ↗</a><span class="alt"><a href="materials/01_pastor-ai/card-example-kimcheolsu.html" download>템플릿 내려받기(HTML)</a></span></div>
+            <div class="material-card"><h3>교회 홈페이지 템플릿(사용설명서 포함)</h3><p>초보자용 사용설명서가 딸린 교회 홈페이지 한 벌. 데모를 보고 ZIP으로 내려받으세요.</p><a class="fmt" href="materials/01_pastor-ai/church-site-template/index.html" target="_blank" rel="noopener">데모 바로보기 ↗</a><span class="alt"><a href="materials/01_pastor-ai/church-site-template.zip" download>ZIP 내려받기</a> · <a href="materials/01_pastor-ai/church-site-template/사용설명서.txt" download>사용설명서</a></span></div>
+          </div>
+        </div>
+        <div class="material-group"><h3>② 이음 앱 사용 안내</h3>
+          <div class="material-grid">
+            <div class="material-card"><h3>캠프 — 오픈 템플릿 안내</h3><p>공유용 템플릿, 가상 시연 데이터, 3분 체험, 셋업 방법을 담은 안내문.</p><a class="fmt" href="materials/02_app-guides/camp-open-template-guide.html" target="_blank" rel="noopener">바로보기 ↗</a></div>
+            <div class="material-card"><h3>포토 — 사용 원칙과 안내</h3><p>사진을 서버에 올리지 않는 로컬 우선 원칙, 스쿨과의 CSV 연동을 설명.</p><a class="fmt" href="materials/02_app-guides/photo-principles-guide.html" target="_blank" rel="noopener">바로보기 ↗</a></div>
+            <div class="material-card"><h3>교사동행GPT — 첫사용 안내문</h3><p>교사가 처음 쓸 때의 안내. “개인정보를 넣지 않기” 원칙 포함.</p><a class="fmt" href="materials/02_app-guides/teacher-companion-gpt-first-use.html" target="_blank" rel="noopener">바로보기 ↗</a></div>
+            <div class="material-card"><h3>교사동행GPT — 안전·개인정보·윤리 가이드</h3><p>교회학교에서 AI를 쓸 때 지킬 안전·개인정보·윤리 기준.</p><a class="fmt" href="materials/02_app-guides/teacher-companion-gpt-safety-guide.html" target="_blank" rel="noopener">바로보기 ↗</a></div>
+          </div>
+        </div>
+        <div class="material-group"><h3>③ 달란트로드 자료</h3>
+          <div class="material-grid">
+            <div class="material-card"><h3>은사성향 질문지 세트(표준 60·심화 100·청년형 2종)</h3><p>수련회·오프라인 검사용 인쇄 질문지. 웹 검사와 별도로 교사가 직접 쓸 수 있습니다.</p><a class="fmt" href="materials/03_talentroad/questionnaire-standard-60.pdf" target="_blank" rel="noopener">표준형 60문항 PDF ↗</a><span class="alt"><a href="materials/03_talentroad/questionnaire-advanced-100.pdf" download>심화형 100</a> · <a href="materials/03_talentroad/questionnaire-standard-60-mz.pdf" download>청년형 60</a> · <a href="materials/03_talentroad/questionnaire-advanced-100-mz.pdf" download>청년형 심화 100</a></span></div>
+          </div>
+        </div>
       </div>
     </section>
 

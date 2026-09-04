@@ -1,0 +1,386 @@
+{
+ "generated": "2026-09-04",
+ "generator": "worker-2 build_materials.py",
+ "policy": {
+  "원본": "원본 파일은 수정하지 않는다. 공개용 사본만 materials/ 에 둔다.",
+  "저작 분류": "owner=오너 저작 / ai-assisted=AI 보조(오너 지시·검수) / unknown=불명(공개 금지)",
+  "개인정보": "이름·전화·이메일·교회명·QR 스크리닝 후 게시. 오너 연락처는 사이트 푸터 이메일 1개로 통일"
+ },
+ "items": [
+  {
+   "id": "m01",
+   "category": "① 목회자를 위한 AI·바이브코딩 교육",
+   "title": "목회자를 위한 AI&바이브코딩 실전 입문 — 강의 슬라이드(43장)",
+   "desc": "2026년 8월 90분 강의에서 실제로 쓴 슬라이드. 브라우저에서 바로 열립니다.",
+   "format": "바로보기",
+   "sources": [
+    {
+     "path": "D:\\HONG\\01_AI_신학_교육\\목회자_AI_바이브코딩_교육\\90분강의_20260824\\02_슬라이드\\목회자를 위한 AI&바이브코딩 실전 입문.html",
+     "sha256": "cf850240e432c466bd17f46e23afaeaddaae938f66d737c721f47e9b9e89f382",
+     "bytes": 665362
+    }
+   ],
+   "outputs": [
+    {
+     "path": "materials/01_pastor-ai/slides-pastor-ai-vibecoding.html",
+     "sha256": "cf850240e432c466bd17f46e23afaeaddaae938f66d737c721f47e9b9e89f382",
+     "bytes": 665362
+    }
+   ],
+   "authorship": "owner",
+   "confidence": "High",
+   "copied": "2026-09-04",
+   "notes": "원본 그대로. 발표자 이름 6회·앱 링크 포함(연락처 없음 — 정규식 스크리닝 0건)"
+  },
+  {
+   "id": "m02",
+   "category": "① 목회자를 위한 AI·바이브코딩 교육",
+   "title": "강의 전 사전안내",
+   "desc": "수강 전에 준비할 것을 정리한 참가자 배포 문서.",
+   "format": "바로보기(HTML 변환)",
+   "sources": [
+    {
+     "path": "D:\\HONG\\01_AI_신학_교육\\목회자_AI_바이브코딩_교육\\90분강의_20260824\\03_참가자배포\\강의전_사전안내.md",
+     "sha256": "08d8b1bedda31b593477b85bb4cfae6e45ec19b73601fa62d8eb659c892289b2",
+     "bytes": 7177
+    }
+   ],
+   "outputs": [
+    {
+     "path": "materials/01_pastor-ai/pre-lecture-guide.html",
+     "sha256": "9f3e590779ab23c062a4ba69ac91490f8bac37ccf3e9f60e80359f94f1eac968",
+     "bytes": 8314
+    }
+   ],
+   "authorship": "owner",
+   "confidence": "High",
+   "copied": "2026-09-04",
+   "notes": "원본의 '(발표자용) 이 안내가 필요한 이유' 절(발표자 개인 명함 URL·QR 파일 언급 포함)은 참가자용이 아니어서 공개 사본에서 제외. 내부 작성근거 인용줄 1개 제거"
+  },
+  {
+   "id": "m03",
+   "category": "① 목회자를 위한 AI·바이브코딩 교육",
+   "title": "실습 따라하기",
+   "desc": "강의 실습을 혼자서도 따라 할 수 있게 쓴 참가자용 안내. (강의 배포자료로만 게시 — 링크명함 앱 카드에는 붙이지 않음)",
+   "format": "바로보기 + 다운로드(md)",
+   "sources": [
+    {
+     "path": "D:\\HONG\\01_AI_신학_교육\\목회자_AI_바이브코딩_교육\\90분강의_20260824\\03_참가자배포\\실습_따라하기.md",
+     "sha256": "027c0abd567683f7ffb84ad5cef4eb73bd0d504bd0244e86dc937203a08435de",
+     "bytes": 4956
+    }
+   ],
+   "outputs": [
+    {
+     "path": "materials/01_pastor-ai/hands-on-guide.html",
+     "sha256": "24911c4971fa0b1c8cc060393b7d4bc1488add46a4555f0d1f177276d54c80ab",
+     "bytes": 9747
+    },
+    {
+     "path": "materials/01_pastor-ai/hands-on-guide.md",
+     "sha256": "027c0abd567683f7ffb84ad5cef4eb73bd0d504bd0244e86dc937203a08435de",
+     "bytes": 4956
+    }
+   ],
+   "authorship": "owner",
+   "confidence": "High",
+   "copied": "2026-09-04",
+   "notes": "원본 그대로(개인정보 0건)"
+  },
+  {
+   "id": "m04",
+   "category": "① 목회자를 위한 AI·바이브코딩 교육",
+   "title": "실습용 명함 템플릿(예시 인물 김철수)",
+   "desc": "강의 실습에 쓰는 명함 HTML 템플릿. 가상 인물로 채워져 있어 내려받아 내 정보로 바꿔 쓰면 됩니다. (강의 배포자료로만 게시 — 링크명함 앱 카드에는 붙이지 않음)",
+   "format": "바로보기 + 다운로드",
+   "sources": [
+    {
+     "path": "D:\\HONG\\01_AI_신학_교육\\목회자_AI_바이브코딩_교육\\90분강의_20260824\\03_참가자배포\\명함_김철수.html",
+     "sha256": "e8cf54ba4ea0d26bfed046c98a1ccbff4b107ec6405da686a62a5b404131184a",
+     "bytes": 9877
+    }
+   ],
+   "outputs": [
+    {
+     "path": "materials/01_pastor-ai/card-example-kimcheolsu.html",
+     "sha256": "e8cf54ba4ea0d26bfed046c98a1ccbff4b107ec6405da686a62a5b404131184a",
+     "bytes": 9877
+    },
+    {
+     "path": "materials/01_pastor-ai/photo.jpg",
+     "sha256": "c2e30d5297e5ebc12b99b2642e607a8f2dc52a3901e6884419a451ca1e0f4970",
+     "bytes": 10409
+    }
+   ],
+   "authorship": "owner",
+   "confidence": "High",
+   "copied": "2026-09-04",
+   "notes": "★승인 목록의 '실습용 명함 템플릿'(원본 실습용_명함.html)은 검토 기록의 '개인정보 제거판'과 달리 오너 이름 2·휴대폰 2·이메일 1·경력 문구 2회를 포함해 게시하지 않음(원본 무수정). 완전 가상 인물 명함_김철수.html(성령교회·010-1234-5678·grace@church.kr·가상 경력)을 템플릿 겸 예시로 게시. photo.jpg(사용자 사진 자리)가 배포 원본에 없어 '내 사진' 자리표시 JPEG(600×600, 생성물)를 같은 폴더에 추가"
+  },
+  {
+   "id": "m05",
+   "category": "① 목회자를 위한 AI·바이브코딩 교육",
+   "title": "교회 홈페이지 템플릿(사용설명서 포함)",
+   "desc": "초보자용 사용설명서가 딸린 교회 홈페이지 템플릿. ZIP 하나와 데모 페이지로 제공.",
+   "format": "다운로드(ZIP) + 데모 바로보기",
+   "sources": [
+    {
+     "path": "D:\\HONG\\01_AI_신학_교육\\목회자_AI_바이브코딩_교육\\90분강의_20260824\\05_추가자료\\교회홈페이지_템플릿\\about.html",
+     "sha256": "14200deaf4651d17ed1ae0e57556b195e99b7327e2bbce2107209aaf51074521",
+     "bytes": 2406
+    },
+    {
+     "path": "D:\\HONG\\01_AI_신학_교육\\목회자_AI_바이브코딩_교육\\90분강의_20260824\\05_추가자료\\교회홈페이지_템플릿\\assets\\css\\style.css",
+     "sha256": "5628b3fd4dc42cea0bc4f934e4e15b7f5b242661b1f528160757915a0ffb08a1",
+     "bytes": 17588
+    },
+    {
+     "path": "D:\\HONG\\01_AI_신학_교육\\목회자_AI_바이브코딩_교육\\90분강의_20260824\\05_추가자료\\교회홈페이지_템플릿\\assets\\img\\favicon.svg",
+     "sha256": "47b311820ace4df9cf39f4b5efb1d3d9a1babf368227cdd264b440494796d686",
+     "bytes": 194
+    },
+    {
+     "path": "D:\\HONG\\01_AI_신학_교육\\목회자_AI_바이브코딩_교육\\90분강의_20260824\\05_추가자료\\교회홈페이지_템플릿\\assets\\img\\hero-mosaic.svg",
+     "sha256": "7194fdf775bad6b88969f4b3f89793efbc4082d29c20ef4ebf61808a731a8b16",
+     "bytes": 169240
+    },
+    {
+     "path": "D:\\HONG\\01_AI_신학_교육\\목회자_AI_바이브코딩_교육\\90분강의_20260824\\05_추가자료\\교회홈페이지_템플릿\\assets\\img\\hero.svg",
+     "sha256": "b6589dd8d48cf352b0353e1c2395e9b51a24403a22b0f5a65ff31908ccfcd59f",
+     "bytes": 7319
+    },
+    {
+     "path": "D:\\HONG\\01_AI_신학_교육\\목회자_AI_바이브코딩_교육\\90분강의_20260824\\05_추가자료\\교회홈페이지_템플릿\\assets\\js\\main.js",
+     "sha256": "45f98faa829e95c774657214bcab142c0f34a5fe2df0b78a001e539e5088a14d",
+     "bytes": 17626
+    },
+    {
+     "path": "D:\\HONG\\01_AI_신학_교육\\목회자_AI_바이브코딩_교육\\90분강의_20260824\\05_추가자료\\교회홈페이지_템플릿\\assets\\js\\site-data.js",
+     "sha256": "b4df732b5e0cbb0ca4c6deadbeb41319796c79689dc39406517476efab90fb19",
+     "bytes": 13893
+    },
+    {
+     "path": "D:\\HONG\\01_AI_신학_교육\\목회자_AI_바이브코딩_교육\\90분강의_20260824\\05_추가자료\\교회홈페이지_템플릿\\gallery.html",
+     "sha256": "4f6a82ef2e86dea74eb40265101bdb6ff4f95b903fd08aac37179e1b1ff2001c",
+     "bytes": 1243
+    },
+    {
+     "path": "D:\\HONG\\01_AI_신학_교육\\목회자_AI_바이브코딩_교육\\90분강의_20260824\\05_추가자료\\교회홈페이지_템플릿\\index.html",
+     "sha256": "d4851ff3cd6a5f0d98338aa1341a2572aa507ecfe5bf8b8f20b3d2c60e38fbd6",
+     "bytes": 3962
+    },
+    {
+     "path": "D:\\HONG\\01_AI_신학_교육\\목회자_AI_바이브코딩_교육\\90분강의_20260824\\05_추가자료\\교회홈페이지_템플릿\\location.html",
+     "sha256": "1544e8182b82401321d620a8c2ed0d010a35fc7135434372f4bf6590ad404e2f",
+     "bytes": 1369
+    },
+    {
+     "path": "D:\\HONG\\01_AI_신학_교육\\목회자_AI_바이브코딩_교육\\90분강의_20260824\\05_추가자료\\교회홈페이지_템플릿\\news.html",
+     "sha256": "312c4dad6bb6f0695381df4be38bc65695ab49088a2812bbb27d9bbc463c71c8",
+     "bytes": 1230
+    },
+    {
+     "path": "D:\\HONG\\01_AI_신학_교육\\목회자_AI_바이브코딩_교육\\90분강의_20260824\\05_추가자료\\교회홈페이지_템플릿\\sermons.html",
+     "sha256": "1b3591a9a607789a5c755283a58e3b7a425b777cd3f4666882775557d4f32f7c",
+     "bytes": 1815
+    },
+    {
+     "path": "D:\\HONG\\01_AI_신학_교육\\목회자_AI_바이브코딩_교육\\90분강의_20260824\\05_추가자료\\교회홈페이지_템플릿\\worship.html",
+     "sha256": "d31e5349c3a8acc60fbea5953b56eb6b299a02756582e3638669c1d4facb435b",
+     "bytes": 1756
+    },
+    {
+     "path": "D:\\HONG\\01_AI_신학_교육\\목회자_AI_바이브코딩_교육\\90분강의_20260824\\05_추가자료\\교회홈페이지_템플릿\\사용설명서.txt",
+     "sha256": "705361827f9368dd1756f9a9c206b8e43fe4711a78b417ff561a97a26bf3e948",
+     "bytes": 12875
+    }
+   ],
+   "outputs": [
+    {
+     "path": "materials/01_pastor-ai/church-site-template.zip",
+     "sha256": "1424b3a9c43f2dd9c8d41c84619c1932c6b7617f7137c8eefef5d0647938c081",
+     "bytes": 45494
+    },
+    {
+     "path": "materials/01_pastor-ai/church-site-template/index.html",
+     "sha256": "d4851ff3cd6a5f0d98338aa1341a2572aa507ecfe5bf8b8f20b3d2c60e38fbd6",
+     "bytes": 3962
+    },
+    {
+     "path": "materials/01_pastor-ai/church-site-template/사용설명서.txt",
+     "sha256": "705361827f9368dd1756f9a9c206b8e43fe4711a78b417ff561a97a26bf3e948",
+     "bytes": 12875
+    }
+   ],
+   "authorship": "owner(추정)",
+   "confidence": "Med",
+   "copied": "2026-09-04",
+   "notes": "파일 14개(html 7·css/js·svg 3·사용설명서). hero.svg·hero-mosaic.svg 출처: 파일 내부에 제작도구·저작권 메타데이터 없음, 한국어/영어 aria-label 만 있음, 폴더 전체가 2026-08-24 22:20 동일 시각 생성 → 강의 준비 세션 산출물로 추정(외부 출처 표지 0). 외부 참조는 Google Fonts·youtube.com 링크뿐, 연락처 0건"
+  },
+  {
+   "id": "m06",
+   "category": "② 이음 앱 사용 안내",
+   "title": "캠프 — 오픈 템플릿 안내",
+   "desc": "공유용 템플릿, 가상 시연 데이터, 3분 체험, 셋업 방법을 담은 안내문.",
+   "format": "바로보기(HTML 변환)",
+   "sources": [
+    {
+     "path": "D:\\HONG\\09_이음\\02_제품\\Web\\eum-camp\\README.md",
+     "sha256": "5056af483056f26b3e3a02e5eff9e60f13f172980e30495fce038b84a595232b",
+     "bytes": 4546
+    }
+   ],
+   "outputs": [
+    {
+     "path": "materials/02_app-guides/camp-open-template-guide.html",
+     "sha256": "f65c1b7e8cb20e4fb21b1bc6ccae457537c5a4bd94a9b8e3cac9d99f9f903b66",
+     "bytes": 9000
+    }
+   ],
+   "authorship": "owner",
+   "confidence": "High",
+   "copied": "2026-09-04",
+   "notes": "머리의 as-of 주석 제거, 상대 링크(./docs/…)는 GitHub 저장소 blob URL로 치환"
+  },
+  {
+   "id": "m07",
+   "category": "② 이음 앱 사용 안내",
+   "title": "포토 — 사용 원칙과 안내",
+   "desc": "사진을 서버에 올리지 않는 로컬 우선 원칙, 스쿨과의 CSV 연동을 설명.",
+   "format": "바로보기(HTML 변환)",
+   "sources": [
+    {
+     "path": "D:\\HONG\\09_이음\\02_제품\\Web\\eum-photo\\README.md",
+     "sha256": "2f70ad46b9b7e143a300b2f44faeeac6f1836da65985f3a94b8fae63385766b2",
+     "bytes": 5060
+    }
+   ],
+   "outputs": [
+    {
+     "path": "materials/02_app-guides/photo-principles-guide.html",
+     "sha256": "4be4d75f7434198840360fb35e22b25fceaf3370deeded466abc28e6efeda593",
+     "bytes": 9460
+    }
+   ],
+   "authorship": "owner",
+   "confidence": "High",
+   "copied": "2026-09-04",
+   "notes": "상대 링크는 GitHub 저장소 blob URL로 치환"
+  },
+  {
+   "id": "m08",
+   "category": "② 이음 앱 사용 안내",
+   "title": "교사동행GPT — 첫사용 안내문",
+   "desc": "교사가 처음 쓸 때의 안내. \"개인정보를 넣지 않기\" 원칙 포함.",
+   "format": "바로보기",
+   "sources": [
+    {
+     "path": "D:\\HONG\\01_AI_신학_교육\\교사동행GPT_지식자료\\teacher-companion-knowledge-additional\\교사동행GPT_첫사용_안내문.md",
+     "sha256": "b1bfa55bbdabf3295c8a0cc7808eadc2f5e6d650d6cf3f81e7d5c4726b3640ac",
+     "bytes": 5761
+    }
+   ],
+   "outputs": [
+    {
+     "path": "materials/02_app-guides/teacher-companion-gpt-first-use.html",
+     "sha256": "c463e95214b944900f3a8e9b6988fcd5f0e17cf649a0645471e7bf81b438ed7a",
+     "bytes": 10023
+    }
+   ],
+   "authorship": "owner",
+   "confidence": "High",
+   "copied": "2026-09-04",
+   "notes": "원본 그대로"
+  },
+  {
+   "id": "m09",
+   "category": "② 이음 앱 사용 안내",
+   "title": "교사동행GPT — 안전·개인정보·윤리 가이드",
+   "desc": "교회학교에서 AI를 쓸 때 지킬 안전·개인정보·윤리 기준.",
+   "format": "바로보기",
+   "sources": [
+    {
+     "path": "D:\\HONG\\01_AI_신학_교육\\교사동행GPT_지식자료\\teacher-companion-knowledge\\안전_개인정보_윤리_가이드.md",
+     "sha256": "a46c94d1af05c6844b75476a05da1495b1d304ec945332959210999d2c29e78a",
+     "bytes": 4919
+    }
+   ],
+   "outputs": [
+    {
+     "path": "materials/02_app-guides/teacher-companion-gpt-safety-guide.html",
+     "sha256": "8c7c7ac82044507439c53e2dd9b87ef8a5755d208032fab90dcd1e0d80710cef",
+     "bytes": 9069
+    }
+   ],
+   "authorship": "owner",
+   "confidence": "High",
+   "copied": "2026-09-04",
+   "notes": "원본 그대로(본문 확인: 실명·연락처 0건)"
+  },
+  {
+   "id": "m10",
+   "category": "③ 달란트로드 자료",
+   "title": "은사성향 질문지 세트(표준 60·심화 100·청년형 2종)",
+   "desc": "수련회·오프라인 검사용 인쇄 질문지. 웹 검사와 별도로 교사가 직접 쓸 수 있습니다.",
+   "format": "다운로드(PDF 4개)",
+   "sources": [
+    {
+     "path": "D:\\HONG\\03_교회_사역자료\\달란트로드\\은사성향_질문지_표준형60.docx",
+     "sha256": "5d385ab1e400fded0d620e62a911f439ed13a4b55c3bb24b7cffdc398a8908c7",
+     "bytes": 29694
+    },
+    {
+     "path": "D:\\HONG\\03_교회_사역자료\\달란트로드\\은사성향_질문지_심화형100.docx",
+     "sha256": "76b463430a54c3ca3c702b64296d4c7202c7bf5538755be6434dea1b28b060d3",
+     "bytes": 31194
+    },
+    {
+     "path": "D:\\HONG\\03_교회_사역자료\\달란트로드\\은사성향_질문지_표준형60 MZ버전.docx",
+     "sha256": "8cb6293be3e6d0055ed221ba9a18f89c6a35d3106127da2639fc440e25e3a254",
+     "bytes": 40666
+    },
+    {
+     "path": "D:\\HONG\\03_교회_사역자료\\달란트로드\\은사성향_질문지_심화형100 MZ버전.docx",
+     "sha256": "11119565627e0d90afd506c6af8c980f0191067b2a5988bbd5a38b8a08a2723d",
+     "bytes": 47226
+    }
+   ],
+   "outputs": [
+    {
+     "path": "materials/03_talentroad/questionnaire-standard-60.pdf",
+     "sha256": "c6a1ad9f016ac19f4120394bdf5c7ca1a185a459970baf2fe76d0b7171ee3272",
+     "bytes": 285905
+    },
+    {
+     "path": "materials/03_talentroad/questionnaire-advanced-100.pdf",
+     "sha256": "43ff9ad33bf26e681f7b806db2d0fd3c4990fc5efa9806f39d9cf1cefc2f7772",
+     "bytes": 304879
+    },
+    {
+     "path": "materials/03_talentroad/questionnaire-standard-60-mz.pdf",
+     "sha256": "3e625143221ca5a1d4e2e700c76601889363d00fe8a0ead3bcf4e279ad278e40",
+     "bytes": 373284
+    },
+    {
+     "path": "materials/03_talentroad/questionnaire-advanced-100-mz.pdf",
+     "sha256": "0e82d4a7157fa22e66010b8a7fb1c4d11c7187116e52933cf4a18444027224d8",
+     "bytes": 337511
+    }
+   ],
+   "authorship": "owner",
+   "confidence": "High(본문 확인)",
+   "copied": "2026-09-04",
+   "notes": "docx 4개를 Word 로 PDF 변환. 본문 스크리닝: 이름 필드·연락처 0건, 표·이미지 없음. 원본 txt 2개(MZ질문지.txt·질문지.txt)는 docx 와 중복이라 제외"
+  }
+ ],
+ "held": [
+  {
+   "id": "m11",
+   "category": "③ 달란트로드 자료",
+   "title": "종합 검사 보고서 서식(승인 목록 #15)",
+   "source": "D:\\HONG\\03_교회_사역자료\\달란트로드\\달란트로드_은사성향검사_종합보고서.docx",
+   "sha256": "31f565c29c4e0bc02b728aaf62c0ff1e4b8cee9a9a5fef15956d1923ea01cb9c",
+   "reason": "본문 실측 결과 제목이 '달란트로드 은사·성향·미션 통합검사 개발 보고서'(개발 기획 의도·비교분석·시스템 설계·브랜드 전략·참고문헌)로, 승인 근거였던 '검사 결과를 상담용으로 정리해 출력하는 서식'이 아님. 개발 보고서 공개는 승인 범위 밖이라 게시하지 않고 오너 확인 요청"
+  }
+ ]
+}
