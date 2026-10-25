@@ -54,7 +54,7 @@
 
   .topbar{ display:flex; align-items:center; justify-content:space-between; margin-bottom:18px; }
   .topbar .brand{ display:flex; align-items:center; gap:10px; }
-  .topbar .logo{ width:30px; height:auto; }
+  .topbar .logo{ height:60px; width:auto; }
   .topbar .word{ font-size:15px; font-weight:800; color:var(--ink); }
   .topbar nav{ display:flex; gap:22px; }
   .topbar nav a{ font-size:13px; font-weight:700; color:var(--ink-tertiary); text-decoration:none; }
@@ -110,11 +110,13 @@
   footer{ text-align:center; margin-top:36px; }
   footer .tag{ margin:0 0 8px; font-size:13.5px; font-weight:700; color:var(--ink-secondary); }
   footer .made{ margin:0; font-size:12px; color:var(--ink-tertiary); }
+  footer .foot-logo{ height:36px; width:auto; display:block; margin:0 auto 12px; }
 
   @media (max-width:640px){
     .card{ padding:32px 22px; }
     .pair{ grid-template-columns:1fr; }
     .topbar nav{ gap:14px; }
+    .topbar .logo{ height:50px; }
   }
 </style>
 </head>
@@ -126,8 +128,7 @@
 <div class="shell">
   <div class="topbar">
     <div class="brand">
-      <img class="logo" src="assets/eum-logo.png" alt="이음 E:UM 로고">
-      <span class="word">이음교육연구소</span>
+      <img class="logo" src="assets/eum-lab-logo.png" width="2167" height="725" alt="이음교육연구소 Eum Education Lab 로고">
     </div>
     <nav>
       <a href="#apps">이음 앱</a>
@@ -166,8 +167,8 @@
         <a class="app-chip" href="https://lgh5440.github.io/eum-photo/" target="_blank" rel="noopener">
           <img class="aicon" src="assets/photo.png" alt="포토 아이콘">포토<span class="desc">행사 사진을 모으고 정리해서<br>함께 나누는 우리들의 사진첩</span>
         </a>
-        <a class="app-chip" href="https://lgh5440.github.io/eum/" target="_blank" rel="noopener">
-          <img class="aicon" src="assets/card.png" alt="링크명함 아이콘">링크명함<span class="desc">연락처와 소개를 한 장에 담아<br>가볍게 공유하는 디지털 명함</span>
+        <a class="app-chip" href="https://lgh5440.github.io/calling-map/" target="_blank" rel="noopener">
+          <img class="aicon" src="assets/calling-map-512.webp" alt="소명지도 아이콘">소명지도<span class="desc">은사에서 시작해 직업·학과·학교를<br>살펴보는 소명 진로 안내</span>
         </a>
         <a class="app-chip" href="https://lgh5440.github.io/talentroad-test/" target="_blank" rel="noopener">
           <img class="aicon" src="assets/talentroad.png" alt="달란트로드 아이콘">달란트로드<span class="desc">재능과 흥미를 하나씩 살펴보며<br>나의 길을 찾아가는 진로 탐색</span>
@@ -193,6 +194,7 @@
   </div>
 
   <footer>
+    <img class="foot-logo" src="assets/eum-lab-logo.png" width="2167" height="725" alt="이음교육연구소 Eum Education Lab 로고">
     <p class="tag">이음교육연구소와 함께 배움의 연결을 만듭니다.</p>
     <p class="made mono">E:UM EDUCATION LAB</p>
   </footer>
